@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roberta Sada — Fine Art</title>
+<meta name="description" content="Roberta Sada — Mexican fine artist specializing in large-scale hyperrealistic oil paintings. Nature, florals, and landscapes rendered with extraordinary detail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --white: #FAFAF8;
+  --off-white: #F3F1EC;
+  --cream: #E8E4DB;
+  --warm-gray: #B5AFA6;
+  --mid-gray: #8A847B;
+  --dark: #2A2622;
+  --black: #1A1714;
+  --accent: #8B7355;
+  --accent-light: #C4AD8F;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Jost', 'Helvetica Neue', sans-serif;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--sans);
+  background: var(--white);
+  color: var(--dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── PRELOADER ─── */
+.preloader {
+  position: fixed; inset: 0; z-index: 10000;
+  background: var(--black);
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.preloader-text {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: preloaderFade 2s ease forwards;
+}
+@keyframes preloaderFade {
+  0% { opacity: 0; letter-spacing: 0.6em; }
+  50% { opacity: 1; }
+  100% { opacity: 1; letter-spacing: 0.35em; }
+}
+
+/* ─── NAVIGATION ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 1.5rem 3rem;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.5s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+nav.scrolled {
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 1rem 3rem;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+nav.scrolled .nav-logo { color: var(--dark); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.5s ease;
+}
+nav.scrolled .nav-links a { color: var(--mid-gray); }
+nav.scrolled .nav-links a:hover { color: var(--dark); }
+.nav-links a::after {
+  content: '';
+  position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* Hamburger */
+.hamburger {
+  display: none; cursor: pointer; background: none; border: none;
+  width: 28px; height: 20px; position: relative; z-index: 1001;
+}
+.hamburger span {
+  display: block; width: 100%; height: 1.5px; background: var(--white);
+  position: absolute; left: 0; transition: all 0.35s ease;
+}
+nav.scrolled .hamburger span { background: var(--dark); }
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.hamburger span:nth-child(3) { bottom: 0; }
+.hamburger.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 999;
+  background: var(--black);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.mobile-menu.active { opacity: 1; visibility: visible; }
+.mobile-menu ul { list-style: none; text-align: center; }
+.mobile-menu li { margin: 1.5rem 0; }
+.mobile-menu a {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--cream);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: opacity 0.3s;
+}
+.mobile-menu a:hover { opacity: 0.6; }
+
+/* ─── HERO ─── */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('images/Cuadro_flores_4x2.jpeg') center/cover no-repeat;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(26,23,20,0.45) 0%,
+    rgba(26,23,20,0.25) 40%,
+    rgba(26,23,20,0.55) 100%
+  );
+}
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+.hero-content h1 {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  line-height: 1.05;
+  opacity: 0;
+  animation: heroReveal 1.5s ease 0.8s forwards;
+}
+.hero-divider {
+  width: 60px; height: 1px;
+  background: var(--accent-light);
+  margin: 1.8rem auto;
+  opacity: 0;
+  animation: heroReveal 1.2s ease 1.2s forwards;
+}
+.hero-subtitle {
+  font-family: var(--sans);
+  font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+  font-weight: 300;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: heroReveal 1.2s ease 1.5s forwards;
+}
+@keyframes heroReveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.scroll-indicator {
+  position: absolute; bottom: 3rem; left: 50%;
+  transform: translateX(-50%); z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 0.8rem;
+  opacity: 0;
+  animation: heroReveal 1s ease 2s forwards;
+}
+.scroll-indicator span {
+  font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5); font-weight: 300;
+}
+.scroll-line {
+  width: 1px; height: 40px; background: rgba(255,255,255,0.25);
+  position: relative; overflow: hidden;
+}
+.scroll-line::after {
+  content: ''; position: absolute; top: -100%; left: 0;
+  width: 100%; height: 100%; background: rgba(255,255,255,0.7);
+  animation: scrollPulse 2s ease infinite;
+}
+@keyframes scrollPulse {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* ─── SECTIONS COMMON ─── */
+section { padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem); }
+.section-label {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 1.5rem;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+.section-divider {
+  width: 40px; height: 1px;
+  background: var(--accent);
+  margin-bottom: 2rem;
+}
+
+/* ─── ABOUT ─── */
+.about {
+  background: var(--white);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+.about-portrait {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.about-portrait img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(0.9);
+  transition: transform 0.8s ease;
+}
+.about-portrait:hover img { transform: scale(1.03); }
+.about-portrait::after {
+  content: '';
+  position: absolute; inset: 0;
+  border: 1px solid rgba(139,115,85,0.15);
+  pointer-events: none;
+}
+.about-text p {
+  font-family: var(--sans);
+  font-size: clamp(0.9rem, 1.1vw, 1.02rem);
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--mid-gray);
+  margin-bottom: 1.5rem;
+}
+.about-text p em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1em;
+  color: var(--accent);
+}
+.about-stats {
+  display: flex; gap: 3rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--cream);
+}
+.stat-item {}
+.stat-number {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--dark);
+}
+.stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-top: 0.3rem;
+}
+
+/* ─── GALLERY ─── */
+.gallery { background: var(--off-white); }
+.gallery-header {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+.gallery-filters {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+}
+.filter-btn {
+  background: none; border: none; cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s;
+}
+.filter-btn.active, .filter-btn:hover { color: var(--dark); }
+.filter-btn.active::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 100%; height: 1px; background: var(--accent);
+}
+
+.gallery-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  columns: 3;
+  column-gap: 1.2rem;
+}
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.gallery-item.visible {
+  opacity: 1; transform: translateY(0);
+}
+.gallery-item img {
+  width: 100%; display: block;
+  transition: transform 0.7s ease;
+}
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(transparent 50%, rgba(26,23,20,0.75));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-overlay h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+.gallery-overlay span {
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+/* ─── LIGHTBOX ─── */
+.lightbox {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(26,23,20,0.96);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  cursor: pointer;
+}
+.lightbox.active { opacity: 1; visibility: visible; }
+.lightbox img {
+  max-width: 88vw; max-height: 85vh;
+  object-fit: contain;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+}
+.lightbox-info {
+  position: absolute;
+  bottom: 2.5rem; left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.lightbox-info h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--cream);
+}
+.lightbox-info span {
+  font-size: 0.7rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--warm-gray);
+}
+.lightbox-close {
+  position: absolute; top: 2rem; right: 2.5rem;
+  background: none; border: none; cursor: pointer;
+  color: var(--warm-gray); font-size: 1.4rem;
+  transition: color 0.3s;
+}
+.lightbox-close:hover { color: var(--white); }
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,0.4); font-size: 2rem;
+  padding: 1rem;
+  transition: color 0.3s;
+}
+.lightbox-nav:hover { color: var(--white); }
+.lightbox-prev { left: 1.5rem; }
+.lightbox-next { right: 1.5rem; }
+
+/* ─── FEATURED STATEMENT (parallax-like quote) ─── */
+.statement {
+  background: var(--black);
+  padding: clamp(5rem, 12vw, 10rem) clamp(2rem, 8vw, 8rem);
+  text-align: center;
+}
+.statement blockquote {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+.statement cite {
+  display: block;
+  margin-top: 2rem;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-style: normal;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+/* ─── COLLECTIONS / SERIES ─── */
+.collections {
+  background: var(--white);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.collection-card {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  cursor: pointer;
+}
+.collection-card img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.collection-card:hover img { transform: scale(1.06); }
+.collection-card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(transparent 40%, rgba(26,23,20,0.8));
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  transition: background 0.4s;
+}
+.collection-card:hover .collection-card-overlay {
+  background: linear-gradient(transparent 20%, rgba(26,23,20,0.85));
+}
+.collection-card-overlay h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--white);
+}
+.collection-card-overlay p {
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.12em;
+  margin-top: 0.4rem;
+}
+
+/* ─── CONTACT ─── */
+.contact {
+  background: var(--off-white);
+}
+.contact-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+}
+.contact-info {}
+.contact-info p {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--mid-gray);
+  margin-bottom: 2.5rem;
+}
+.contact-detail {
+  margin-bottom: 1.8rem;
+}
+.contact-detail-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 0.4rem;
+}
+.contact-detail a {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--dark);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+.contact-detail a:hover { border-bottom-color: var(--accent); }
+.social-links {
+  display: flex; gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.social-links a {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.social-links a:hover { color: var(--dark); }
+
+/* Contact Form */
+.contact-form {}
+.form-group { margin-bottom: 1.5rem; }
+.form-group label {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 0.6rem;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.9rem 0;
+  border: none;
+  border-bottom: 1px solid var(--cream);
+  background: transparent;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--dark);
+  outline: none;
+  transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-bottom-color: var(--accent);
+}
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--warm-gray);
+  font-weight: 300;
+}
+.submit-btn {
+  display: inline-flex; align-items: center; gap: 1rem;
+  background: var(--dark);
+  color: var(--cream);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.4s, transform 0.3s;
+}
+.submit-btn:hover { background: var(--black); transform: translateY(-1px); }
+.submit-btn svg { transition: transform 0.3s; }
+.submit-btn:hover svg { transform: translateX(4px); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--black);
+  padding: 3rem clamp(1.5rem, 5vw, 4rem);
+  text-align: center;
+}
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+.footer-links {
+  display: flex; justify-content: center; gap: 2rem;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.footer-links a {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--cream); }
+.footer-copy {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.1em;
+}
+
+/* ─── REVEAL ANIMATIONS ─── */
+.reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .gallery-grid { columns: 2; }
+  .collections-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  nav { padding: 1.2rem 1.5rem; }
+  nav.scrolled { padding: 0.8rem 1.5rem; }
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-portrait { max-width: 400px; margin: 0 auto; }
+  .contact-inner { grid-template-columns: 1fr; }
+  .gallery-grid { columns: 2; column-gap: 0.8rem; }
+  .gallery-item { margin-bottom: 0.8rem; }
+  .collections-grid { grid-template-columns: 1fr; }
+  .about-stats { gap: 2rem; }
+  .lightbox-nav { display: none; }
+}
+@media (max-width: 480px) {
+  .gallery-grid { columns: 1; }
+  .about-stats { flex-direction: column; gap: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="preloader-text">Roberta Sada</div>
+</div>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Roberta Sada</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about" class="mobile-link">About</a></li>
+    <li><a href="#gallery" class="mobile-link">Gallery</a></li>
+    <li><a href="#collections" class="mobile-link">Collections</a></li>
+    <li><a href="#contact" class="mobile-link">Contact</a></li>
+  </ul>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>Roberta Sada</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle">Hyperrealist Oil Paintings &ensp;·&ensp; México</p>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-portrait reveal">
+      <img src="images/Autoretrato_RSA.jpeg" alt="Roberta Sada — Self Portrait" loading="lazy">
+    </div>
+    <div class="about-text reveal" style="transition-delay: 0.15s;">
+      <p class="section-label">About the Artist</p>
+      <h2 class="section-title">Where Nature Meets<br>the Canvas</h2>
+      <div class="section-divider"></div>
+      <p>
+        Born and raised in Mexico, Roberta Sada is a fine artist whose large-scale oil paintings 
+        blur the boundary between reality and art. Her work captures the extraordinary beauty 
+        hidden in the natural world — from the delicate veins of a petal to the vast stillness 
+        of a forest reflected in water.
+      </p>
+      <p>
+        Working in oil on canvas, Roberta's hyperrealistic approach demands an <em>intimate 
+        observation</em> of her subjects. Each painting is a meditation on light, color, and the 
+        transient beauty of the living world — rendered at a monumental scale that immerses 
+        the viewer completely.
+      </p>
+      <p>
+        Her subjects range from lush botanical compositions and serene waterscapes to 
+        evocative portraits, each executed with a precision and sensitivity that invites 
+        prolonged contemplation.
+      </p>
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Works in Collection</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Oil</div>
+          <div class="stat-label">Primary Medium</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">México</div>
+          <div class="stat-label">Based In</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Artist Statement -->
+<section class="statement">
+  <blockquote class="reveal">
+    "I paint what moves me — the play of light on water, 
+    the architecture of petals, the quiet dignity of living things. 
+    Each canvas is an invitation to stop, look closer, and discover 
+    the extraordinary within the everyday."
+  </blockquote>
+  <cite class="reveal" style="transition-delay:0.15s;">— Roberta Sada</cite>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header">
+    <p class="section-label reveal">Selected Works</p>
+    <h2 class="section-title reveal" style="transition-delay:0.1s">Gallery</h2>
+    <div class="gallery-filters reveal" style="transition-delay:0.2s">
+      <button class="filter-btn active" data-filter="all">All Works</button>
+      <button class="filter-btn" data-filter="floral">Florals</button>
+      <button class="filter-btn" data-filter="landscape">Landscapes</button>
+      <button class="filter-btn" data-filter="water">Water</button>
+      <button class="filter-btn" data-filter="other">Other</button>
+    </div>
+  </div>
+  <div class="gallery-grid" id="galleryGrid">
+    <!-- Items injected by JS -->
+  </div>
+</section>
+
+<!-- Collections -->
+<section class="collections" id="collections">
+  <p class="section-label reveal">Explore</p>
+  <h2 class="section-title reveal" style="transition-delay:0.1s">Collections</h2>
+  <div class="section-divider reveal" style="transition-delay:0.15s"></div>
+  <div class="collections-grid">
+    <div class="collection-card reveal" style="transition-delay:0.1s">
+      <img src="images/Ranuculus_44x41pulg.jpeg" alt="Floral Collection" loading="lazy">
+      <div class="collection-card-overlay">
+        <h3>Florals</h3>
+        <p>Roses, Peonies, Ranunculus & Bougainvillea</p>
+      </div>
+    </div>
+    <div class="collection-card reveal" style="transition-delay:0.2s">
+      <img src="images/El_bosque_2_00_x_1_66.jpeg" alt="Landscape Collection" loading="lazy">
+      <div class="collection-card-overlay">
+        <h3>Landscapes</h3>
+        <p>Forests, Aspens & Natural Worlds</p>
+      </div>
+    </div>
+    <div class="collection-card reveal" style="transition-delay:0.3s">
+      <img src="images/Nanufares_con_reflejo_1_35_x_1_80.jpeg" alt="Water Collection" loading="lazy">
+      <div class="collection-card-overlay">
+        <h3>Water</h3>
+        <p>Reflections, Lilies & Aquatic Light</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Inquiries &<br>Commissions</h2>
+      <div class="section-divider"></div>
+      <p>
+        For purchase inquiries, commissions, exhibition proposals, 
+        or collaboration opportunities, please reach out directly. 
+        All works are available as original oil on canvas paintings.
+      </p>
+      <div class="contact-detail">
+        <div class="contact-detail-label">Email</div>
+        <a href="mailto:sadaroberta@gmail.com">sadaroberta@gmail.com</a>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-label">Instagram</div>
+        <a href="https://instagram.com/robertasada" target="_blank" rel="noopener">@robertasada</a>
+      </div>
+      <div class="social-links">
+        <a href="https://instagram.com/robertasada" target="_blank" rel="noopener">Instagram →</a>
+      </div>
+    </div>
+    <div class="contact-form reveal" style="transition-delay:0.15s">
+      <form id="contactForm" action="https://formsubmit.co/sadaroberta@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New inquiry from your website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="interest">Subject</label>
+          <select id="interest" name="interest">
+            <option value="" disabled selected>Select a subject</option>
+            <option value="purchase">Purchase Inquiry</option>
+            <option value="commission">Commission</option>
+            <option value="exhibition">Exhibition Proposal</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your inquiry..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">
+          Send Message
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">Roberta Sada</div>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 Roberta Sada. All rights reserved. All artwork is original oil on canvas.</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">&#10005;</button>
+  <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8592;</button>
+  <button class="lightbox-nav lightbox-next" aria-label="Next">&#8594;</button>
+  <img src="" alt="" id="lightboxImg">
+  <div class="lightbox-info">
+    <h3 id="lightboxTitle"></h3>
+    <span id="lightboxMeta"></span>
+  </div>
+</div>
+
+<script>
+// Gallery data
+const artworks = [
+  { src: 'images/Bugambilias_naranjas_2_00_x_1_00.jpeg', title: 'Bugambilias Naranjas', size: '200 × 100 cm', category: 'floral' },
+  { src: 'images/Aspens_1_60_x_1_08.jpeg', title: 'Aspens', size: '160 × 108 cm', category: 'landscape' },
+  { src: 'images/Peonias_Blancas_2_3x2_3_Oct2020.jpeg', title: 'Peonías Blancas', size: '230 × 230 cm', category: 'floral' },
+  { src: 'images/Pantano_1_60_x_1_20.jpeg', title: 'Pantano', size: '160 × 120 cm', category: 'water' },
+  { src: 'images/Ranuculus_44x41pulg.jpeg', title: 'Ranúnculus', size: '112 × 104 cm', category: 'floral' },
+  { src: 'images/El_bosque_2_00_x_1_66.jpeg', title: 'El Bosque', size: '200 × 166 cm', category: 'landscape' },
+  { src: 'images/Nanufares_1_35_x_1_80.jpeg', title: 'Nenúfares', size: '135 × 180 cm', category: 'water' },
+  { src: 'images/Alla__en_la_Fuente_2_x_1_50.jpeg', title: 'Allá en la Fuente', size: '200 × 150 cm', category: 'water' },
+  { src: 'images/20210125_Rosas_blancas.jpeg', title: 'Rosas Blancas', size: 'Oil on Canvas', category: 'floral' },
+  { src: 'images/Filodendro_2_00_x_1_20.jpeg', title: 'Filodendro', size: '200 × 120 cm', category: 'landscape' },
+  { src: 'images/Cuadro_flores_4x2.jpeg', title: 'Flores', size: '400 × 200 cm', category: 'floral' },
+  { src: 'images/Los_perros_1_20_x1_20.jpeg', title: 'Los Perros', size: '120 × 120 cm', category: 'other' },
+  { src: 'images/Tri_ptico_Arbol_Pantano_3_00_x_2_00.jpeg', title: 'Tríptico Árbol Pantano', size: '300 × 200 cm', category: 'landscape' },
+  { src: 'images/Nanufares_con_reflejo_1_35_x_1_80.jpeg', title: 'Nenúfares con Reflejo', size: '135 × 180 cm', category: 'water' },
+];
+
+// Preloader
+window.addEventListener('load', () => {
+  setTimeout(() => document.querySelector('.preloader').classList.add('hidden'), 1800);
+});
+
+// Nav scroll
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+});
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+});
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
+
+// Render gallery
+const grid = document.getElementById('galleryGrid');
+let currentFilter = 'all';
+
+function renderGallery(filter) {
+  grid.innerHTML = '';
+  const filtered = filter === 'all' ? artworks : artworks.filter(a => a.category === filter);
+  filtered.forEach((art, i) => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+    item.dataset.category = art.category;
+    item.style.transitionDelay = `${i * 0.06}s`;
+    item.innerHTML = `
+      <img src="${art.src}" alt="${art.title}" loading="lazy">
+      <div class="gallery-overlay">
+        <h3>${art.title}</h3>
+        <span>${art.size} · Oil on Canvas</span>
+      </div>
+    `;
+    item.addEventListener('click', () => openLightbox(filtered, filtered.indexOf(art)));
+    grid.appendChild(item);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => item.classList.add('visible'));
+    });
+  });
+}
+renderGallery('all');
+
+// Filters
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    renderGallery(currentFilter);
+  });
+});
+
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxTitle = document.getElementById('lightboxTitle');
+const lightboxMeta = document.getElementById('lightboxMeta');
+let lightboxItems = [];
+let lightboxIndex = 0;
+
+function openLightbox(items, index) {
+  lightboxItems = items;
+  lightboxIndex = index;
+  showLightboxItem();
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function showLightboxItem() {
+  const art = lightboxItems[lightboxIndex];
+  lightboxImg.src = art.src;
+  lightboxImg.alt = art.title;
+  lightboxTitle.textContent = art.title;
+  lightboxMeta.textContent = art.size + ' · Oil on Canvas';
+}
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+document.querySelector('.lightbox-prev').addEventListener('click', e => {
+  e.stopPropagation();
+  lightboxIndex = (lightboxIndex - 1 + lightboxItems.length) % lightboxItems.length;
+  showLightboxItem();
+});
+document.querySelector('.lightbox-next').addEventListener('click', e => {
+  e.stopPropagation();
+  lightboxIndex = (lightboxIndex + 1) % lightboxItems.length;
+  showLightboxItem();
+});
+document.addEventListener('keydown', e => {
+  if (!lightbox.classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') { lightboxIndex = (lightboxIndex - 1 + lightboxItems.length) % lightboxItems.length; showLightboxItem(); }
+  if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % lightboxItems.length; showLightboxItem(); }
+});
+
+// Scroll reveals
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>
