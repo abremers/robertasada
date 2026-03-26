@@ -199,12 +199,44 @@ footer{background:var(--black);padding:3rem clamp(1.5rem,5vw,4rem);text-align:ce
 .footer-links a:hover{color:var(--cream)}
 .footer-copy{font-size:.65rem;color:rgba(255,255,255,.25);letter-spacing:.1em}
 
+/* EXHIBITION POSTERS */
+.expo-posters{background:var(--white);padding:0 clamp(1.5rem,5vw,4rem) clamp(4rem,8vw,6rem)}
+.expo-posters-inner{max-width:1400px;margin:0 auto}
+.expo-posters-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.expo-poster-item{position:relative;overflow:hidden;border-radius:2px;cursor:pointer}
+.expo-poster-item img{width:100%;display:block;transition:transform .7s;aspect-ratio:.75;object-fit:cover}
+.expo-poster-item:hover img{transform:scale(1.03)}
+.expo-poster-caption{padding:1rem 0}
+.expo-poster-caption h4{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--dark)}
+.expo-poster-caption p{font-size:.75rem;color:var(--warm-gray);letter-spacing:.1em;margin-top:.25rem}
+
+/* EVENT PHOTOS */
+.event-photos{background:var(--black);padding:clamp(4rem,8vw,6rem) clamp(1.5rem,5vw,4rem)}
+.event-photos-inner{max-width:1400px;margin:0 auto}
+.event-photos-inner .section-title{color:var(--cream)}
+.event-photos-inner .section-label{color:var(--warm-gray)}
+.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2rem}
+.event-item{position:relative;overflow:hidden;border-radius:2px}
+.event-item img{width:100%;display:block;transition:transform .7s}
+.event-item:hover img{transform:scale(1.03)}
+.event-caption{padding:.8rem 0}
+.event-caption p{font-size:.75rem;color:var(--warm-gray);letter-spacing:.1em}
+
+/* ARTIST AT WORK */
+.artist-at-work{background:var(--off-white);padding:clamp(4rem,8vw,6rem) clamp(1.5rem,5vw,4rem)}
+.artist-at-work-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:center}
+.artist-at-work img{width:100%;display:block;border-radius:2px}
+.artist-at-work-text .section-title{font-size:clamp(1.6rem,3vw,2.6rem)}
+.artist-at-work-text p{font-family:var(--sans);font-size:.95rem;font-weight:300;line-height:1.85;color:var(--mid-gray);margin-bottom:1rem}
+@media(max-width:768px){
+  .expo-posters-grid{grid-template-columns:1fr}
+  .event-grid{grid-template-columns:1fr}
+  .artist-at-work-inner{grid-template-columns:1fr}
+}
+
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
-/* RESPONSIVE */
-@media(max-width:1024px){.gallery-grid{columns:2}.installed-grid{grid-template-columns:repeat(2,1fr)}}
+.reveal.visible{opacity:1;transform:translateY(0)}{.gallery-grid{columns:2}.installed-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
 nav{padding:1.2rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}
 .nav-links{display:none}.hamburger{display:block}
@@ -246,6 +278,7 @@ nav{padding:1.2rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}
     <li><a href="#installed" class="mobile-link" data-en="Installed" data-es="Instaladas">Instaladas</a></li>
     <li><a href="#available" class="mobile-link" data-en="Available" data-es="En Venta">En Venta</a></li>
     <li><a href="#testimonials" class="mobile-link" data-en="Testimonials" data-es="Testimonios">Testimonios</a></li>
+    <li><a href="#exhibitions" class="mobile-link" data-en="Exhibitions" data-es="Exposiciones">Exposiciones</a></li>
     <li><a href="#contact" class="mobile-link" data-en="Contact" data-es="Contacto">Contacto</a></li>
   </ul>
 </div>
@@ -347,6 +380,73 @@ nav{padding:1.2rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}
     <h2 class="section-title reveal" data-en="Exhibitions & Installations" data-es="Exposiciones e Instalaciones">Exposiciones e Instalaciones</h2>
     <div class="section-divider reveal"></div>
     <div class="exhibitions-list" id="exhibitionsList"></div>
+  </div>
+</section>
+
+<!-- EXHIBITION POSTERS -->
+<section class="expo-posters" id="expo-posters">
+  <div class="expo-posters-inner">
+    <p class="section-label reveal" data-en="Invitations & Posters" data-es="Invitaciones y Carteles">Invitaciones y Carteles</p>
+    <h2 class="section-title reveal" data-en="Exhibition Posters" data-es="Carteles de Exposición">Carteles de Exposición</h2>
+    <div class="section-divider reveal"></div>
+    <div class="expo-posters-grid">
+      <div class="reveal">
+        <div class="expo-poster-item"><img src="images/expo_fragancia_de_luz.jpeg" alt="Fragancia de Luz — ETRA Galería 2025" loading="lazy"></div>
+        <div class="expo-poster-caption">
+          <h4 data-en="Fragancia de Luz" data-es="Fragancia de Luz">Fragancia de Luz</h4>
+          <p data-en="ETRA Galería · San Pedro Garza García · September 2025" data-es="ETRA Galería · San Pedro Garza García · Septiembre 2025">ETRA Galería · San Pedro Garza García · Septiembre 2025</p>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <div class="expo-poster-item"><img src="images/expo_bouquet.jpeg" alt="Bouquet — Akadem" loading="lazy"></div>
+        <div class="expo-poster-caption">
+          <h4 data-en="Bouquet" data-es="Bouquet">Bouquet</h4>
+          <p data-en="Galería Abierta Akadem · San Pedro Garza García · October 2024" data-es="Galería Abierta Akadem · San Pedro Garza García · Octubre 2024">Galería Abierta Akadem · San Pedro Garza García · Octubre 2024</p>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="expo-poster-item"><img src="images/expo_petalos_de_luz.jpeg" alt="Pétalos de Luz — Akadem" loading="lazy"></div>
+        <div class="expo-poster-caption">
+          <h4 data-en="Pétalos de Luz" data-es="Pétalos de Luz">Pétalos de Luz</h4>
+          <p data-en="Galería Abierta Akadem · San Pedro Garza García · July 2023" data-es="Galería Abierta Akadem · San Pedro Garza García · Julio 2023">Galería Abierta Akadem · San Pedro Garza García · Julio 2023</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTIST AT WORK -->
+<section class="artist-at-work">
+  <div class="artist-at-work-inner">
+    <div class="reveal">
+      <img src="images/artist_at_work.jpeg" alt="Roberta Sada pintando">
+    </div>
+    <div class="artist-at-work-text reveal" style="transition-delay:.15s">
+      <p class="section-label" data-en="The Artist" data-es="La Artista">La Artista</p>
+      <h2 class="section-title" data-en="The Studio" data-es="El Taller">El Taller</h2>
+      <div class="section-divider"></div>
+      <p data-en="Every canvas begins with light. Roberta works at monumental scale — her paintings often measuring two meters or more — capturing the fleeting quality of natural light with meticulous, patient brushwork." data-es="Cada lienzo comienza con la luz. Roberta trabaja a escala monumental — sus pinturas frecuentemente miden dos metros o más — capturando la calidad fugaz de la luz natural con un trabajo de pincel meticuloso y paciente.">Cada lienzo comienza con la luz. Roberta trabaja a escala monumental — sus pinturas frecuentemente miden dos metros o más — capturando la calidad fugaz de la luz natural con un trabajo de pincel meticuloso y paciente.</p>
+      <p data-en="Her hyperrealist technique, developed over decades, transforms oil on canvas into windows onto nature — so precise, so luminous, that viewers reach out to touch the petals." data-es="Su técnica hiperrealista, desarrollada a lo largo de décadas, transforma el óleo sobre lienzo en ventanas hacia la naturaleza — tan precisas, tan luminosas, que los espectadores desean tocar los pétalos.">Su técnica hiperrealista, desarrollada a lo largo de décadas, transforma el óleo sobre lienzo en ventanas hacia la naturaleza — tan precisas, tan luminosas, que los espectadores desean tocar los pétalos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT PHOTOS -->
+<section class="event-photos">
+  <div class="event-photos-inner">
+    <p class="section-label reveal" data-en="The Mexican · Dallas, TX" data-es="The Mexican · Dallas, TX">The Mexican · Dallas, TX</p>
+    <h2 class="section-title reveal" data-en="Tapiz Floral — Permanent Installation" data-es="Tapiz Floral — Instalación Permanente">Tapiz Floral — Instalación Permanente</h2>
+    <div class="section-divider reveal"></div>
+    <div class="event-grid">
+      <div class="reveal">
+        <div class="event-item"><img src="images/event_tapiz_floral_1.jpeg" alt="Tapiz Floral — The Mexican Dallas" loading="lazy"></div>
+        <div class="event-caption"><p data-en="Opening night — The Mexican, Dallas, TX" data-es="Noche de inauguración — The Mexican, Dallas, TX">Noche de inauguración — The Mexican, Dallas, TX</p></div>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <div class="event-item"><img src="images/event_tapiz_floral_2.jpeg" alt="Tapiz Floral — The Mexican Dallas" loading="lazy"></div>
+        <div class="event-caption"><p data-en="Guests beside Tapiz Floral — The Mexican, Dallas, TX" data-es="Invitados junto al Tapiz Floral — The Mexican, Dallas, TX">Invitados junto al Tapiz Floral — The Mexican, Dallas, TX</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -530,35 +630,46 @@ const artworks = [
 
 const installedWorks = [
   {src:'images/AS_3x_2x2m__hanged.jpg',title:'Tapiz Floral',location:'The Mexican — Dallas, TX',titleEn:'Tapiz Floral',locationEn:'The Mexican — Dallas, TX'},
-  {src:'images/AA_2x2m_hanged.jpg',title:'Ajos y Elotes',location:'Colección privada',titleEn:'Ajos y Elotes',locationEn:'Private collection'},
-  {src:'images/AAO_2x1_5m_hanged.jpg',title:'Jardín de Colores',location:'Colección privada',titleEn:'Jardín de Colores',locationEn:'Private collection'},
+  {src:'images/installed_gladiolos_blancos.jpeg',title:'Gladiolos Blancos',location:'Colección privada',titleEn:'White Gladiolas',locationEn:'Private collection'},
+  {src:'images/installed_koi_pond.jpeg',title:'Estanque de Koi',location:'Colección privada',titleEn:'Koi Pond',locationEn:'Private collection'},
+  {src:'images/installed_peonias_blancas.jpeg',title:'Peonías Blancas',location:'Colección privada',titleEn:'White Peonies',locationEn:'Private collection'},
+  {src:'images/installed_dalia_blanca.jpeg',title:'Dalia Blanca',location:'Colección privada',titleEn:'White Dahlia',locationEn:'Private collection'},
+  {src:'images/installed_crisantemo_dorado.jpeg',title:'Crisantemo Dorado',location:'Colección privada',titleEn:'Golden Chrysanthemum',locationEn:'Private collection'},
+  {src:'images/installed_rosa_fucsia.jpeg',title:'Rosa Fucsia',location:'Colección privada',titleEn:'Fuchsia Rose',locationEn:'Private collection'},
+  {src:'images/installed_alcachofas.jpeg',title:'Alcachofas y Berenjenas',location:'Colección privada',titleEn:'Artichokes & Eggplant',locationEn:'Private collection'},
+  {src:'images/AAO_2x1_5m_hanged.jpg',title:'Jardín de Colores',location:'Colección privada',titleEn:'Garden of Colors',locationEn:'Private collection'},
   {src:'images/AT__2x1_5m__hanged.jpg',title:'Fiesta de Rosas',location:'Colección privada',titleEn:'Fiesta de Rosas',locationEn:'Private collection'},
-  {src:'images/K_2x_2x2m_.jpg',title:'Flores — Díptico',location:'Colección privada',titleEn:'Flores — Diptych',locationEn:'Private collection'},
 ];
 
 const testimonials = {
   es: [
-    {text:'La obra de Roberta transformó completamente nuestro espacio. Cada vez que la veo, descubro un nuevo detalle. Es como tener un jardín eterno en casa.',author:'Coleccionista Privado',location:'Monterrey, México'},
-    {text:'Roberta captura la esencia de la naturaleza mexicana con una maestría excepcional. Su técnica hiperrealista es verdaderamente impresionante.',author:'Director de Galería',location:'Ciudad de México'},
-    {text:'Y así quedó tu obra magnífica. Estamos encantados con el resultado — es la pieza central de nuestro hogar.',author:'Coleccionista Privado',location:'México'},
+    {text:'Como Zeus, poderosa, lanza sus rayos de luz sobre los lienzos — los usa para que las flores desplieguen su fragancia y nos adviertan sobre el deseo, la naturaleza en su esplendor. Universo en donde el color es domeñado y dirigido exactamente donde debe de ir, oficio al servicio de un homenaje a la tierra.',author:'Jorge García Murillo',location:'Crítico de Arte · Septiembre 2025'},
+    {text:'Su talento como artista es enorme; se deja llevar por su intuición, es disciplinada y su objetivo siempre es certero. Y como dijo un amigo y buen crítico de arte: "Roberta no pinta objetos, pinta la luz".',author:'Mauricio Gattas',location:'Coleccionista'},
+    {text:'Admiro su disciplina, dedicación y la rapidez con la que realiza sus obras. Su trazo se caracteriza por la fuerza, perfección y belleza con que representa los paisajes, las flores o la naturaleza muerta en grandes formatos. Al contemplarlos, me llenan de alegría y paz.',author:'Karla Gracida',location:'Artista · Colega'},
+    {text:'Sus obras reflejan la perfecta armonía entre mente y manos. Eres como una nube cargada de talento exorbitante. El mundo es más bello por tus obras y la madre naturaleza se enorgullece tal como yo de disfrutar tus creaciones.',author:'Manuel Rubio Lamas',location:'Coleccionista'},
   ],
   en: [
-    {text:"Roberta's work completely transformed our space. Every time I look at it, I discover a new detail. It's like having an eternal garden at home.",author:'Private Collector',location:'Monterrey, México'},
-    {text:"Roberta captures the essence of Mexican nature with exceptional mastery. Her hyperrealist technique is truly impressive.",author:'Gallery Director',location:'Mexico City'},
-    {text:"And that's how your magnificent work turned out. We are delighted with the result — it's the centerpiece of our home.",author:'Private Collector',location:'México'},
+    {text:'Like Zeus, powerful, she casts her rays of light onto the canvases — she uses them so that flowers unfurl their fragrance and awaken us to desire, nature in its splendor. A universe where color is mastered and guided precisely where it must go, a craft in service of a tribute to the earth.',author:'Jorge García Murillo',location:'Art Critic · September 2025'},
+    {text:'Her talent as an artist is enormous; she follows her intuition, is disciplined, and her aim is always true. As a friend and art critic once said: "Roberta does not paint objects — she paints light."',author:'Mauricio Gattas',location:'Collector'},
+    {text:'I admire her discipline, dedication and the speed with which she creates. Her brushwork is characterized by the strength, perfection and beauty with which she renders landscapes, flowers and still lifes in large formats. Contemplating them fills me with joy and peace.',author:'Karla Gracida',location:'Artist · Colleague'},
+    {text:'Her works reflect the perfect harmony between mind and hands. You are like a cloud charged with extraordinary talent. The world is more beautiful for your creations and Mother Nature is as proud as I am to enjoy them.',author:'Manuel Rubio Lamas',location:'Collector'},
   ]
 };
 
 const exhibitions = {
   es: [
-    {year:'2025',title:'Instalación Permanente',desc:'The Mexican — Dallas, TX. Tríptico Tapiz Floral (3 paneles, 200 × 200 cm cada uno)'},
-    {year:'2024',title:'Colecciones Privadas',desc:'Obras instaladas en residencias y espacios comerciales en México y Estados Unidos'},
-    {year:'2023',title:'Producción Continua',desc:'Serie de florales hiperrealistas de gran formato y bodegones mexicanos'},
+    {year:'2025',title:'Fragancia de Luz — ETRA Galería',desc:'Vasconcelos #301, Col. Bosques del Valle, San Pedro Garza García, NL · Septiembre 2025'},
+    {year:'2025',title:'Instalación Permanente — The Mexican',desc:'Dallas, TX. Tríptico Tapiz Floral (3 paneles, 200 × 200 cm cada uno)'},
+    {year:'2024',title:'Bouquet — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Inauguración: 18 de octubre, 19–22 hrs'},
+    {year:'2023',title:'Pétalos de Luz — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Inauguración: 19 de julio, 19–22 hrs'},
+    {year:'Continuo',title:'Colecciones Privadas',desc:'Obras instaladas en residencias y espacios comerciales en México y Estados Unidos'},
   ],
   en: [
-    {year:'2025',title:'Permanent Installation',desc:'The Mexican — Dallas, TX. Tapiz Floral Triptych (3 panels, 200 × 200 cm each)'},
-    {year:'2024',title:'Private Collections',desc:'Works installed in residences and commercial spaces across Mexico and the United States'},
-    {year:'2023',title:'Ongoing Production',desc:'Series of large-scale hyperrealist florals and Mexican still life paintings'},
+    {year:'2025',title:'Fragancia de Luz — ETRA Galería',desc:'Vasconcelos #301, Col. Bosques del Valle, San Pedro Garza García, NL · September 2025'},
+    {year:'2025',title:'Permanent Installation — The Mexican',desc:'Dallas, TX. Tapiz Floral Triptych (3 panels, 200 × 200 cm each)'},
+    {year:'2024',title:'Bouquet — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Opening: October 18, 7–10 pm'},
+    {year:'2023',title:'Pétalos de Luz — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Opening: July 19, 7–10 pm'},
+    {year:'Ongoing',title:'Private Collections',desc:'Works installed in residences and commercial spaces across Mexico and the United States'},
   ]
 };
 
