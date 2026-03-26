@@ -135,6 +135,8 @@ section{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem)}
 .installed-item:hover img{transform:scale(1.03)}
 .installed-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,23,20,.8));padding:1.5rem;opacity:0;transition:opacity .4s}
 .installed-item:hover .installed-caption{opacity:1}
+.installed-item.featured{grid-column:1/-1}
+.installed-item.featured img{max-height:500px;object-fit:cover;width:100%}
 .installed-caption h4{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--white)}
 .installed-caption p{font-size:.7rem;color:rgba(255,255,255,.6);letter-spacing:.1em;margin-top:.3rem}
 
@@ -431,25 +433,6 @@ nav{padding:1.2rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}
   </div>
 </section>
 
-<!-- EVENT PHOTOS -->
-<section class="event-photos">
-  <div class="event-photos-inner">
-    <p class="section-label reveal" data-en="The Mexican · Dallas, TX" data-es="The Mexican · Dallas, TX">The Mexican · Dallas, TX</p>
-    <h2 class="section-title reveal" data-en="Tapiz Floral — Permanent Installation" data-es="Tapiz Floral — Instalación Permanente">Tapiz Floral — Instalación Permanente</h2>
-    <div class="section-divider reveal"></div>
-    <div class="event-grid">
-      <div class="reveal">
-        <div class="event-item"><img src="images/event_tapiz_floral_1.jpeg" alt="Tapiz Floral — The Mexican Dallas" loading="lazy"></div>
-        <div class="event-caption"><p data-en="Opening night — The Mexican, Dallas, TX" data-es="Noche de inauguración — The Mexican, Dallas, TX">Noche de inauguración — The Mexican, Dallas, TX</p></div>
-      </div>
-      <div class="reveal" style="transition-delay:.1s">
-        <div class="event-item"><img src="images/event_tapiz_floral_2.jpeg" alt="Tapiz Floral — The Mexican Dallas" loading="lazy"></div>
-        <div class="event-caption"><p data-en="Guests beside Tapiz Floral — The Mexican, Dallas, TX" data-es="Invitados junto al Tapiz Floral — The Mexican, Dallas, TX">Invitados junto al Tapiz Floral — The Mexican, Dallas, TX</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
@@ -626,10 +609,14 @@ const artworks = [
   {src:'images/O_2x1_5m.jpg',title:'Gladiolas Rojas',size:'200 × 150 cm',category:'floral'},
   
   {src:'images/AB_2x1_5m.jpg',title:'Orquídeas y Rosas Blancas',size:'200 × 150 cm',category:'floral'},
+  {src:'images/painting_tulipanes_azules.png',title:'Tulipanes Azules y Rosas Amarillas',size:'220 × 140 cm',category:'floral'},
 ];
 
 const installedWorks = [
-  {src:'images/AS_3x_2x2m__hanged.jpg',title:'Tapiz Floral',location:'The Mexican — Dallas, TX',titleEn:'Tapiz Floral',locationEn:'The Mexican — Dallas, TX'},
+  {src:'images/installed_tapiz_floral_dallas.png',title:'Tapiz Floral ★',location:'The Mexican — Dallas, TX',titleEn:'Tapiz Floral ★',locationEn:'The Mexican — Dallas, TX',featured:true},
+  {src:'images/AS_3x_2x2m__hanged.jpg',title:'Tapiz Floral — Tríptico',location:'The Mexican — Dallas, TX',titleEn:'Tapiz Floral — Triptych',locationEn:'The Mexican — Dallas, TX'},
+  {src:'images/installed_peonias_blanco_verde.png',title:'Peonías Blanco y Verde',location:'Colección privada',titleEn:'White & Green Peonies',locationEn:'Private collection'},
+  {src:'images/installed_tres_peonias_rosas.png',title:'Tres Peonías Rosas',location:'Colección privada',titleEn:'Three Pink Peonies',locationEn:'Private collection'},
   {src:'images/installed_gladiolos_blancos.jpeg',title:'Gladiolos Blancos',location:'Colección privada',titleEn:'White Gladiolas',locationEn:'Private collection'},
   {src:'images/installed_koi_pond.jpeg',title:'Estanque de Koi',location:'Colección privada',titleEn:'Koi Pond',locationEn:'Private collection'},
   {src:'images/installed_peonias_blancas.jpeg',title:'Peonías Blancas',location:'Colección privada',titleEn:'White Peonies',locationEn:'Private collection'},
@@ -637,6 +624,8 @@ const installedWorks = [
   {src:'images/installed_crisantemo_dorado.jpeg',title:'Crisantemo Dorado',location:'Colección privada',titleEn:'Golden Chrysanthemum',locationEn:'Private collection'},
   {src:'images/installed_rosa_fucsia.jpeg',title:'Rosa Fucsia',location:'Colección privada',titleEn:'Fuchsia Rose',locationEn:'Private collection'},
   {src:'images/installed_alcachofas.jpeg',title:'Alcachofas y Berenjenas',location:'Colección privada',titleEn:'Artichokes & Eggplant',locationEn:'Private collection'},
+  {src:'images/event_tapiz_floral_1.jpeg',title:'Sinfonías en Blanco',location:'Colección privada — evento',titleEn:'Sinfonías en Blanco',locationEn:'Private collection — event'},
+  {src:'images/event_tapiz_floral_2.jpeg',title:'Sinfonías en Blanco',location:'Colección privada — evento',titleEn:'Sinfonías en Blanco',locationEn:'Private collection — event'},
   {src:'images/AAO_2x1_5m_hanged.jpg',title:'Jardín de Colores',location:'Colección privada',titleEn:'Garden of Colors',locationEn:'Private collection'},
   {src:'images/AT__2x1_5m__hanged.jpg',title:'Fiesta de Rosas',location:'Colección privada',titleEn:'Fiesta de Rosas',locationEn:'Private collection'},
 ];
@@ -644,13 +633,13 @@ const installedWorks = [
 const testimonials = {
   es: [
     {text:'Como Zeus, poderosa, lanza sus rayos de luz sobre los lienzos — los usa para que las flores desplieguen su fragancia y nos adviertan sobre el deseo, la naturaleza en su esplendor. Universo en donde el color es domeñado y dirigido exactamente donde debe de ir, oficio al servicio de un homenaje a la tierra.',author:'Jorge García Murillo',location:'Crítico de Arte · Septiembre 2025'},
-    {text:'Su talento como artista es enorme; se deja llevar por su intuición, es disciplinada y su objetivo siempre es certero. Y como dijo un amigo y buen crítico de arte: "Roberta no pinta objetos, pinta la luz".',author:'Mauricio Gattas',location:'Coleccionista'},
+    {text:'Su talento como artista es enorme; se deja llevar por su intuición, es disciplinada y su objetivo siempre es certero. Y como dijo un amigo y buen crítico de arte: "Roberta no pinta objetos, pinta la luz".',author:'Mauricio Gattas',location:'Maestro · Crítico y Valuador de Arte'},
     {text:'Admiro su disciplina, dedicación y la rapidez con la que realiza sus obras. Su trazo se caracteriza por la fuerza, perfección y belleza con que representa los paisajes, las flores o la naturaleza muerta en grandes formatos. Al contemplarlos, me llenan de alegría y paz.',author:'Karla Gracida',location:'Artista · Colega'},
     {text:'Sus obras reflejan la perfecta armonía entre mente y manos. Eres como una nube cargada de talento exorbitante. El mundo es más bello por tus obras y la madre naturaleza se enorgullece tal como yo de disfrutar tus creaciones.',author:'Manuel Rubio Lamas',location:'Coleccionista'},
   ],
   en: [
     {text:'Like Zeus, powerful, she casts her rays of light onto the canvases — she uses them so that flowers unfurl their fragrance and awaken us to desire, nature in its splendor. A universe where color is mastered and guided precisely where it must go, a craft in service of a tribute to the earth.',author:'Jorge García Murillo',location:'Art Critic · September 2025'},
-    {text:'Her talent as an artist is enormous; she follows her intuition, is disciplined, and her aim is always true. As a friend and art critic once said: "Roberta does not paint objects — she paints light."',author:'Mauricio Gattas',location:'Collector'},
+    {text:'Her talent as an artist is enormous; she follows her intuition, is disciplined, and her aim is always true. As a friend and art critic once said: "Roberta does not paint objects — she paints light."',author:'Mauricio Gattas',location:'Teacher · Art Critic & Valuator'},
     {text:'I admire her discipline, dedication and the speed with which she creates. Her brushwork is characterized by the strength, perfection and beauty with which she renders landscapes, flowers and still lifes in large formats. Contemplating them fills me with joy and peace.',author:'Karla Gracida',location:'Artist · Colleague'},
     {text:'Her works reflect the perfect harmony between mind and hands. You are like a cloud charged with extraordinary talent. The world is more beautiful for your creations and Mother Nature is as proud as I am to enjoy them.',author:'Manuel Rubio Lamas',location:'Collector'},
   ]
@@ -736,7 +725,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 const iGrid = document.getElementById('installedGrid');
 installedWorks.forEach(w => {
   const item = document.createElement('div');
-  item.className = 'installed-item reveal';
+  item.className = 'installed-item reveal' + (w.featured ? ' featured' : '');
   const t = lang === 'en' ? w.titleEn : w.title;
   const loc = lang === 'en' ? w.locationEn : w.location;
   item.innerHTML = `<img src="${w.src}" alt="${t}" loading="lazy"><div class="installed-caption"><h4>${t}</h4><p>${loc}</p></div>`;
