@@ -375,11 +375,11 @@ nav{padding:1.2rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}
         <input type="hidden" name="_template" value="table">
         <div class="form-group">
           <label for="name" data-en="Full Name" data-es="Nombre Completo">Nombre Completo</label>
-          <input type="text" id="name" name="name" placeholder="Su nombre" required>
+          <input type="text" id="name" name="name" placeholder="Su nombre" data-placeholder-es="Su nombre" data-placeholder-en="Your name" required>
         </div>
         <div class="form-group">
           <label for="email" data-en="Email Address" data-es="Correo Electrónico">Correo Electrónico</label>
-          <input type="email" id="email" name="email" placeholder="su@email.com" required>
+          <input type="email" id="email" name="email" placeholder="su@email.com" data-placeholder-es="su@email.com" data-placeholder-en="your@email.com" required>
         </div>
         <div class="form-group">
           <label for="interest" data-en="Subject" data-es="Asunto">Asunto</label>
@@ -393,7 +393,7 @@ nav{padding:1.2rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}
         </div>
         <div class="form-group">
           <label for="message" data-en="Message" data-es="Mensaje">Mensaje</label>
-          <textarea id="message" name="message" placeholder="Cuéntenos sobre su consulta..." required></textarea>
+          <textarea id="message" name="message" placeholder="Cuéntenos sobre su consulta..." data-placeholder-es="Cuéntenos sobre su consulta..." data-placeholder-en="Tell us about your inquiry..." required></textarea>
         </div>
         <button type="submit" class="submit-btn" data-en="Send Message" data-es="Enviar Mensaje">Enviar Mensaje <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
       </form>
@@ -435,7 +435,7 @@ const artworks = [
   {src:'images/Alla__en_la_Fuente_2_x_1_50.jpeg',title:'Allá en la Fuente',size:'200 × 150 cm',category:'water'},
   {src:'images/20210125_Rosas_blancas.jpeg',title:'Rosas Blancas',size:'Óleo sobre lienzo',category:'floral'},
   {src:'images/Filodendro_2_00_x_1_20.jpeg',title:'Filodendro',size:'200 × 120 cm',category:'landscape'},
-  {src:'images/Cuadro_flores_4x2.jpeg',title:'Flores',size:'400 × 200 cm',category:'floral'},
+  {src:'images/Cuadro_flores_4x2.jpeg',title:'Flores',size:'Díptico — 2×(200 × 200 cm)',category:'floral'},
   {src:'images/Los_perros_1_20_x1_20.jpeg',title:'Los Perros',size:'120 × 120 cm',category:'other'},
   {src:'images/Tri_ptico_Arbol_Pantano_3_00_x_2_00.jpeg',title:'Tríptico Árbol Pantano',size:'300 × 200 cm',category:'landscape'},
   {src:'images/Nanufares_con_reflejo_1_35_x_1_80.jpeg',title:'Nenúfares con Reflejo',size:'135 × 180 cm',category:'water'},
@@ -461,7 +461,7 @@ const artworks = [
   {src:'images/AAN_2x1m.jpg',title:'Peonías en Luz',size:'200 × 100 cm',category:'floral'},
   {src:'images/AAO_2x1_5m.jpg',title:'Jardín de Colores',size:'200 × 150 cm',category:'floral'},
   {src:'images/AAP_2_8x1_7m.jpg',title:'Gladiolas Blancas',size:'280 × 170 cm',category:'floral'},
-  {src:'images/AB_2x1_5m.jpg',title:'Estanque de Koi',size:'200 × 150 cm',category:'water'},
+  {src:'images/AAK_2x1_5m.jpg',title:'Estanque de Koi',size:'200 × 150 cm',category:'water'},
   // Batch 3
   {src:'images/AC_1_5x1_5m.jpg',title:'Rosas y Hortensias',size:'150 × 150 cm',category:'floral'},
   {src:'images/AD_3x_2x2m_.jpg',title:'Tapiz Floral',size:'Tríptico — 3×(200 × 200 cm)',category:'floral'},
@@ -519,13 +519,13 @@ const artworks = [
   {src:'images/AAT_1x1m.jpg',title:'Peonía Delicada',size:'100 × 100 cm',category:'floral'},
   {src:'images/AAU_1_6x1_6m.jpg',title:'Rosas Solares',size:'160 × 160 cm',category:'floral'},
   {src:'images/AAV_1_6x1_6m.jpg',title:'Dos Peonías II',size:'160 × 160 cm',category:'floral'},
-  {src:'images/AAW_2x1_5m.jpg',title:'Ranúnculos de Luz',size:'200 × 150 cm',category:'floral'},
+  {src:'images/AAW_2x1_5m.jpg',title:'Ranúnculos de Luz',size:'200 × 150 cm',category:'water'},
   {src:'images/AAX_2_4x1_2m.jpg',title:'Crisantemos de Oro',size:'240 × 120 cm',category:'floral'},
   {src:'images/AAY_2x1_5m.jpg',title:'Bouquet Pastel',size:'200 × 150 cm',category:'floral'},
   {src:'images/AAZ_1_8x1_6m.jpg',title:'Gladiolas Naranjas',size:'180 × 160 cm',category:'floral'},
   {src:'images/O_2x1_5m.jpg',title:'Gladiolas Rojas',size:'200 × 150 cm',category:'floral'},
-  {src:'images/K_2x_2x2m_.jpg',title:'Explosión Floral II',size:'Díptico — 2×(200 × 200 cm)',category:'floral'},
-  {src:'images/AAK_2x1_5m.jpg',title:'Orquídeas y Rosas Blancas',size:'200 × 150 cm',category:'floral'},
+  
+  {src:'images/AB_2x1_5m.jpg',title:'Orquídeas y Rosas Blancas',size:'200 × 150 cm',category:'floral'},
 ];
 
 const installedWorks = [
@@ -533,6 +533,7 @@ const installedWorks = [
   {src:'images/AA_2x2m_hanged.jpg',title:'Ajos y Elotes',location:'Colección privada',titleEn:'Ajos y Elotes',locationEn:'Private collection'},
   {src:'images/AAO_2x1_5m_hanged.jpg',title:'Jardín de Colores',location:'Colección privada',titleEn:'Jardín de Colores',locationEn:'Private collection'},
   {src:'images/AT__2x1_5m__hanged.jpg',title:'Fiesta de Rosas',location:'Colección privada',titleEn:'Fiesta de Rosas',locationEn:'Private collection'},
+  {src:'images/K_2x_2x2m_.jpg',title:'Flores — Díptico',location:'Colección privada',titleEn:'Flores — Diptych',locationEn:'Private collection'},
 ];
 
 const testimonials = {
@@ -571,6 +572,9 @@ function setLang(l) {
     const val = el.getAttribute('data-'+l);
     if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') return;
     if (val) el.innerHTML = val;
+  });
+  document.querySelectorAll('[data-placeholder-'+l+']').forEach(el => {
+    el.placeholder = el.getAttribute('data-placeholder-'+l);
   });
   renderTestimonials();
   renderExhibitions();
