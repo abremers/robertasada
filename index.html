@@ -502,6 +502,11 @@ nav{padding:1.2rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}
 </div>
 
 <script>
+// ─── SCROLL REVEALS OBSERVER (defined first, used throughout) ───
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
 // ─── DATA ───
 const artworks = [
 // Original 15
@@ -781,8 +786,6 @@ function renderInstalled() {
   });
 }
 
-renderInstalled();
-
 // ─── TESTIMONIALS ───
 function renderTestimonials() {
   const tGrid = document.getElementById('testimonialsGrid');
@@ -843,21 +846,18 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') { lIdx = (lIdx + 1) % lItems.length; showLB(); }
 });
 
-// ─── SCROLL REVEALS ───
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
+// ─── INIT ───
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+renderInstalled();
+renderTestimonials();
+renderExhibitions();
 
 // ─── SMOOTH SCROLL ───
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => { e.preventDefault(); const t = document.querySelector(a.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
 });
 
-// ─── INIT ───
-renderTestimonials();
-renderExhibitions();
+
 </script>
 </body>
 </html>
