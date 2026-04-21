@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Roberta Sada — Arte Realista</title>
 <meta name="description" content="Roberta Sada — Artista mexicana especializada en pintura realista al óleo de gran formato. Naturaleza, florales y paisajes con extraordinario detalle.">
-
 <!-- Open Graph / Facebook / WhatsApp -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://robertasada.com/">
@@ -17,7 +16,6 @@
 <meta property="og:locale" content="es_MX">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="Roberta Sada">
-
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://robertasada.com/">
@@ -36,13 +34,11 @@
 }
 html{scroll-behavior:smooth;font-size:16px}
 body{font-family:var(--sans);background:var(--white);color:var(--dark);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-
 /* PRELOADER */
 .preloader{position:fixed;inset:0;z-index:10000;background:var(--black);display:flex;align-items:center;justify-content:center;transition:opacity .8s,visibility .8s}
 .preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
 .preloader-text{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3rem);font-weight:300;color:var(--cream);letter-spacing:.35em;text-transform:uppercase;opacity:0;animation:pFade 2s ease forwards}
 @keyframes pFade{0%{opacity:0;letter-spacing:.6em}50%{opacity:1}100%{opacity:1;letter-spacing:.35em}}
-
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all .5s}
 nav.scrolled{background:rgba(250,250,248,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:1rem 3rem;box-shadow:0 1px 0 rgba(0,0,0,.06)}
@@ -59,7 +55,6 @@ nav.scrolled .nav-links a:hover{color:var(--dark)}
 nav.scrolled .lang-toggle{color:var(--mid-gray);border-color:var(--cream)}
 .lang-toggle:hover{color:var(--white);border-color:rgba(255,255,255,.5)}
 nav.scrolled .lang-toggle:hover{color:var(--dark);border-color:var(--accent)}
-
 /* HAMBURGER */
 .hamburger{display:none;cursor:pointer;background:none;border:none;width:28px;height:20px;position:relative;z-index:1001}
 .hamburger span{display:block;width:100%;height:1.5px;background:var(--white);position:absolute;left:0;transition:all .35s}
@@ -68,7 +63,6 @@ nav.scrolled .hamburger span{background:var(--dark)}
 .hamburger.active span:nth-child(1){top:50%;transform:translateY(-50%) rotate(45deg)}
 .hamburger.active span:nth-child(2){opacity:0}
 .hamburger.active span:nth-child(3){bottom:50%;transform:translateY(50%) rotate(-45deg)}
-
 /* MOBILE MENU */
 .mobile-menu{position:fixed;inset:0;z-index:999;background:var(--black);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .5s}
 .mobile-menu.active{opacity:1;visibility:visible}
@@ -76,7 +70,6 @@ nav.scrolled .hamburger span{background:var(--dark)}
 .mobile-menu li{margin:1.5rem 0}
 .mobile-menu a{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--cream);text-decoration:none;letter-spacing:.1em;transition:opacity .3s}
 .mobile-menu a:hover{opacity:.6}
-
 /* HERO */
 .hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:url('images/Cuadro_flores_4x2.jpeg') center/cover}
@@ -91,13 +84,11 @@ nav.scrolled .hamburger span{background:var(--dark)}
 .scroll-line{width:1px;height:40px;background:rgba(255,255,255,.25);position:relative;overflow:hidden}
 .scroll-line::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;background:rgba(255,255,255,.7);animation:sPulse 2s ease infinite}
 @keyframes sPulse{0%{top:-100%}100%{top:100%}}
-
 /* SECTIONS */
 section{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem)}
 .section-label{font-family:var(--sans);font-size:.65rem;font-weight:400;letter-spacing:.35em;text-transform:uppercase;color:var(--warm-gray);margin-bottom:1.5rem}
 .section-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:var(--dark);line-height:1.2;margin-bottom:2rem}
 .section-divider{width:40px;height:1px;background:var(--accent);margin-bottom:2rem}
-
 /* ABOUT */
 .about{background:var(--white);max-width:1400px;margin:0 auto}
 .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,5vw,5rem);align-items:center}
@@ -109,12 +100,10 @@ section{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem)}
 .about-stats{display:flex;gap:3rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--cream)}
 .stat-number{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--dark)}
 .stat-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm-gray);margin-top:.3rem}
-
 /* STATEMENT */
 .statement{background:var(--black);padding:clamp(5rem,12vw,10rem) clamp(2rem,8vw,8rem);text-align:center}
 .statement blockquote{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;font-style:italic;color:var(--cream);line-height:1.6;max-width:800px;margin:0 auto;opacity:.9}
 .statement cite{display:block;margin-top:2rem;font-family:var(--sans);font-size:.7rem;font-style:normal;letter-spacing:.3em;text-transform:uppercase;color:var(--warm-gray)}
-
 /* GALLERY */
 .gallery{background:var(--off-white)}
 .gallery-header{max-width:1400px;margin:0 auto 3rem}
@@ -131,7 +120,6 @@ section{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem)}
 .gallery-item:hover .gallery-overlay{opacity:1}
 .gallery-overlay h3{font-family:var(--serif);font-size:1.15rem;font-weight:400;color:var(--white);letter-spacing:.02em}
 .gallery-overlay span{font-size:.7rem;font-weight:300;color:rgba(255,255,255,.6);letter-spacing:.15em;text-transform:uppercase;margin-top:.3rem}
-
 /* LIGHTBOX */
 .lightbox{position:fixed;inset:0;z-index:9999;background:rgba(26,23,20,.96);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s;cursor:pointer}
 .lightbox.active{opacity:1;visibility:visible}
@@ -144,7 +132,6 @@ section{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem)}
 .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);font-size:2rem;padding:1rem;transition:color .3s}
 .lightbox-nav:hover{color:var(--white)}
 .lightbox-prev{left:1.5rem}.lightbox-next{right:1.5rem}
-
 /* INSTALLED / SOLD */
 .installed{background:var(--white)}
 .installed-inner{max-width:1400px;margin:0 auto}
@@ -158,7 +145,6 @@ section{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem)}
 .installed-item.featured img{max-height:500px;object-fit:cover;width:100%}
 .installed-caption h4{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--white)}
 .installed-caption p{font-size:.7rem;color:rgba(255,255,255,.6);letter-spacing:.1em;margin-top:.3rem}
-
 /* AVAILABLE */
 .available{background:var(--off-white)}
 .available-inner{max-width:1400px;margin:0 auto;text-align:center}
@@ -173,7 +159,6 @@ section{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem)}
 .available-badge{position:absolute;top:1rem;right:1rem;background:var(--accent);color:var(--white);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:.35rem .7rem;border-radius:2px}
 .inquire-btn{display:inline-flex;align-items:center;gap:1rem;background:var(--dark);color:var(--cream);border:none;padding:1rem 2.5rem;font-family:var(--sans);font-size:.72rem;font-weight:400;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .4s,transform .3s}
 .inquire-btn:hover{background:var(--black);transform:translateY(-1px)}
-
 /* TESTIMONIALS */
 .testimonials{background:var(--white)}
 .testimonials-inner{max-width:1400px;margin:0 auto}
@@ -184,7 +169,6 @@ section{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem)}
 .testimonial-author{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--cream)}
 .testimonial-author strong{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--dark);display:block}
 .testimonial-author span{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm-gray)}
-
 /* EXHIBITIONS */
 .exhibitions{background:var(--off-white)}
 .exhibitions-inner{max-width:1400px;margin:0 auto}
@@ -193,7 +177,6 @@ section{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem)}
 .exhibition-year{font-family:var(--serif);font-size:1.4rem;font-weight:300;color:var(--accent)}
 .exhibition-details h4{font-family:var(--sans);font-size:.95rem;font-weight:400;color:var(--dark);margin-bottom:.3rem}
 .exhibition-details p{font-size:.8rem;font-weight:300;color:var(--mid-gray)}
-
 /* CONTACT */
 .contact{background:var(--white)}
 .contact-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem)}
@@ -215,7 +198,6 @@ section{padding:clamp(4rem,10vw,8rem) clamp(1.5rem,5vw,4rem)}
 .submit-btn:hover{background:var(--black);transform:translateY(-1px)}
 .submit-btn svg{transition:transform .3s}
 .submit-btn:hover svg{transform:translateX(4px)}
-
 /* FOOTER */
 footer{background:var(--black);padding:3rem clamp(1.5rem,5vw,4rem);text-align:center}
 .footer-logo{font-family:var(--serif);font-size:1rem;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--cream);opacity:.7;margin-bottom:1.5rem}
@@ -223,7 +205,6 @@ footer{background:var(--black);padding:3rem clamp(1.5rem,5vw,4rem);text-align:ce
 .footer-links a{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm-gray);text-decoration:none;transition:color .3s}
 .footer-links a:hover{color:var(--cream)}
 .footer-copy{font-size:.65rem;color:rgba(255,255,255,.25);letter-spacing:.1em}
-
 /* EXHIBITION POSTERS */
 .expo-posters{background:var(--white);padding:0 clamp(1.5rem,5vw,4rem) clamp(4rem,8vw,6rem)}
 .expo-posters-inner{max-width:1400px;margin:0 auto}
@@ -234,7 +215,6 @@ footer{background:var(--black);padding:3rem clamp(1.5rem,5vw,4rem);text-align:ce
 .expo-poster-caption{padding:1rem 0}
 .expo-poster-caption h4{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--dark)}
 .expo-poster-caption p{font-size:.75rem;color:var(--warm-gray);letter-spacing:.1em;margin-top:.25rem}
-
 /* EVENT PHOTOS */
 .event-photos{background:var(--black);padding:clamp(4rem,8vw,6rem) clamp(1.5rem,5vw,4rem)}
 .event-photos-inner{max-width:1400px;margin:0 auto}
@@ -246,7 +226,6 @@ footer{background:var(--black);padding:3rem clamp(1.5rem,5vw,4rem);text-align:ce
 .event-item:hover img{transform:scale(1.03)}
 .event-caption{padding:.8rem 0}
 .event-caption p{font-size:.75rem;color:var(--warm-gray);letter-spacing:.1em}
-
 /* ARTIST AT WORK */
 .artist-at-work{background:var(--off-white);padding:clamp(4rem,8vw,6rem) clamp(1.5rem,5vw,4rem)}
 .artist-at-work-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:center}
@@ -254,14 +233,14 @@ footer{background:var(--black);padding:3rem clamp(1.5rem,5vw,4rem);text-align:ce
 .artist-at-work-text .section-title{font-size:clamp(1.6rem,3vw,2.6rem)}
 .artist-at-work-text p{font-family:var(--sans);font-size:.95rem;font-weight:300;line-height:1.85;color:var(--mid-gray);margin-bottom:1rem}
 @media(max-width:768px){
-  .expo-posters-grid{grid-template-columns:1fr}
-  .event-grid{grid-template-columns:1fr}
-  .artist-at-work-inner{grid-template-columns:1fr}
+.expo-posters-grid{grid-template-columns:1fr}
+.event-grid{grid-template-columns:1fr}
+.artist-at-work-inner{grid-template-columns:1fr}
 }
-
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s}
-.reveal.visible{opacity:1;transform:translateY(0)}{.gallery-grid{columns:2}.installed-grid{grid-template-columns:repeat(2,1fr)}}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:1024px){.gallery-grid{columns:2}.installed-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
 nav{padding:1.2rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}
 .nav-links{display:none}.hamburger{display:block}
@@ -275,415 +254,420 @@ nav{padding:1.2rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}
 </style>
 </head>
 <body>
-
 <div class="preloader"><div class="preloader-text">Roberta Sada</div></div>
-
+ 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#" class="nav-logo">Roberta Sada</a>
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="#about" data-en="About" data-es="Acerca">Acerca</a></li>
-      <li><a href="#gallery" data-en="Gallery" data-es="Galería">Galería</a></li>
-      <li><a href="#installed" data-en="Installed" data-es="Instaladas">Instaladas</a></li>
-      <li><a href="#available" data-en="Available" data-es="En Venta">En Venta</a></li>
-      <li><a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonios</a></li>
-      <li><a href="#exhibitions" data-en="Exhibitions" data-es="Exposiciones">Exposiciones</a></li>
-      <li><a href="#contact" data-en="Contact" data-es="Contacto">Contacto</a></li>
-    </ul>
-    <button class="lang-toggle" id="langToggle" title="Switch language">EN</button>
-    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <ul>
-    <li><a href="#about" class="mobile-link" data-en="About" data-es="Acerca">Acerca</a></li>
-    <li><a href="#gallery" class="mobile-link" data-en="Gallery" data-es="Galería">Galería</a></li>
-    <li><a href="#installed" class="mobile-link" data-en="Installed" data-es="Instaladas">Instaladas</a></li>
-    <li><a href="#available" class="mobile-link" data-en="Available" data-es="En Venta">En Venta</a></li>
-    <li><a href="#testimonials" class="mobile-link" data-en="Testimonials" data-es="Testimonios">Testimonios</a></li>
-    <li><a href="#exhibitions" class="mobile-link" data-en="Exhibitions" data-es="Exposiciones">Exposiciones</a></li>
-    <li><a href="#contact" class="mobile-link" data-en="Contact" data-es="Contacto">Contacto</a></li>
-  </ul>
+<a href="#" class="nav-logo">Roberta Sada</a>
+<div class="nav-right">
+<ul class="nav-links">
+<li><a href="#about" data-en="About" data-es="Acerca">Acerca</a></li>
+<li><a href="#gallery" data-en="Gallery" data-es="Galería">Galería</a></li>
+<li><a href="#installed" data-en="Installed" data-es="Instaladas">Instaladas</a></li>
+<li><a href="#available" data-en="Available" data-es="En Venta">En Venta</a></li>
+<li><a href="#testimonials" data-en="Testimonials" data-es="Testimonios">Testimonios</a></li>
+<li><a href="#exhibitions" data-en="Exhibitions" data-es="Exposiciones">Exposiciones</a></li>
+<li><a href="#contact" data-en="Contact" data-es="Contacto">Contacto</a></li>
+</ul>
+<button class="lang-toggle" id="langToggle" title="Switch language">EN</button>
+<button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </div>
-
+</nav>
+ 
+<div class="mobile-menu" id="mobileMenu">
+<ul>
+<li><a href="#about" class="mobile-link" data-en="About" data-es="Acerca">Acerca</a></li>
+<li><a href="#gallery" class="mobile-link" data-en="Gallery" data-es="Galería">Galería</a></li>
+<li><a href="#installed" class="mobile-link" data-en="Installed" data-es="Instaladas">Instaladas</a></li>
+<li><a href="#available" class="mobile-link" data-en="Available" data-es="En Venta">En Venta</a></li>
+<li><a href="#testimonials" class="mobile-link" data-en="Testimonials" data-es="Testimonios">Testimonios</a></li>
+<li><a href="#exhibitions" class="mobile-link" data-en="Exhibitions" data-es="Exposiciones">Exposiciones</a></li>
+<li><a href="#contact" class="mobile-link" data-en="Contact" data-es="Contacto">Contacto</a></li>
+</ul>
+</div>
+ 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <h1>Roberta Sada</h1>
-    <div class="hero-divider"></div>
-    <p class="hero-subtitle" data-en="Realist Oil Paintings &ensp;·&ensp; México" data-es="Pintura Realista al Óleo &ensp;·&ensp; México">Pintura Realista al Óleo &ensp;·&ensp; México</p>
-  </div>
-  <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"></div></div>
+<div class="hero-bg"></div>
+<div class="hero-content">
+<h1>Roberta Sada</h1>
+<div class="hero-divider"></div>
+<p class="hero-subtitle" data-en="Realist Oil Paintings &ensp;·&ensp; México" data-es="Pintura Realista al Óleo &ensp;·&ensp; México">Pintura Realista al Óleo &ensp;·&ensp; México</p>
+</div>
+<div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section class="about" id="about">
-  <div class="about-grid">
-    <div class="about-portrait reveal"><img src="images/Autoretrato_RSA.jpeg" alt="Roberta Sada — Autorretrato" loading="lazy"></div>
-    <div class="about-text reveal" style="transition-delay:.15s">
-      <p class="section-label" data-en="About the Artist" data-es="Sobre la Artista">Sobre la Artista</p>
-      <h2 class="section-title" data-en="Where Nature Meets the Canvas" data-es="Donde la Naturaleza se Encuentra con el Lienzo">Donde la Naturaleza se Encuentra con el Lienzo</h2>
-      <div class="section-divider"></div>
-      <p data-en="Born and raised in Mexico, Roberta Sada is a fine artist whose large-scale oil paintings blur the boundary between reality and art. Her work captures the extraordinary beauty hidden in the natural world — from the delicate veins of a petal to the vast stillness of a forest reflected in water." data-es="Nacida y criada en México, Roberta Sada es una artista plástica cuyas pinturas al óleo de gran formato difuminan la frontera entre la realidad y el arte. Su obra captura la belleza extraordinaria oculta en el mundo natural — desde las delicadas venas de un pétalo hasta la vasta quietud de un bosque reflejado en el agua.">Nacida y criada en México, Roberta Sada es una artista plástica cuyas pinturas al óleo de gran formato difuminan la frontera entre la realidad y el arte. Su obra captura la belleza extraordinaria oculta en el mundo natural — desde las delicadas venas de un pétalo hasta la vasta quietud de un bosque reflejado en el agua.</p>
-      <p data-en="Working in oil on canvas, Roberta's realistic approach demands an <em>intimate observation</em> of her subjects. Each painting is a meditation on light, color, and the transient beauty of the living world — rendered at a monumental scale that immerses the viewer completely." data-es="Trabajando en óleo sobre lienzo, el enfoque realista de Roberta exige una <em>observación íntima</em> de sus sujetos. Cada pintura es una meditación sobre la luz, el color y la belleza transitoria del mundo vivo — plasmada a una escala monumental que envuelve completamente al espectador.">Trabajando en óleo sobre lienzo, el enfoque realista de Roberta exige una <em>observación íntima</em> de sus sujetos. Cada pintura es una meditación sobre la luz, el color y la belleza transitoria del mundo vivo — plasmada a una escala monumental que envuelve completamente al espectador.</p>
-      <p data-en="Her subjects range from lush botanical compositions and traditional Mexican market scenes to serene waterscapes and evocative portraits — each executed with a precision and sensitivity that invites prolonged contemplation." data-es="Sus temas van desde exuberantes composiciones botánicas y escenas tradicionales del mercado mexicano hasta serenos paisajes acuáticos y retratos evocadores — cada uno ejecutado con una precisión y sensibilidad que invita a la contemplación prolongada.">Sus temas van desde exuberantes composiciones botánicas y escenas tradicionales del mercado mexicano hasta serenos paisajes acuáticos y retratos evocadores — cada uno ejecutado con una precisión y sensibilidad que invita a la contemplación prolongada.</p>
-      <div class="about-stats">
-        <div><div class="stat-number">97+</div><div class="stat-label" data-en="Works Created" data-es="Obras Creadas">Obras Creadas</div></div>
-        <div><div class="stat-number" data-en="Oil" data-es="Óleo">Óleo</div><div class="stat-label" data-en="Primary Medium" data-es="Medio Principal">Medio Principal</div></div>
-        <div><div class="stat-number">México</div><div class="stat-label" data-en="Based In" data-es="Ubicación">Ubicación</div></div>
-      </div>
-    </div>
-  </div>
+<div class="about-grid">
+<div class="about-portrait reveal"><img src="images/Autoretrato_RSA.jpeg" alt="Roberta Sada — Autorretrato" loading="lazy"></div>
+<div class="about-text reveal" style="transition-delay:.15s">
+<p class="section-label" data-en="About the Artist" data-es="Sobre la Artista">Sobre la Artista</p>
+<h2 class="section-title" data-en="Where Nature Meets the Canvas" data-es="Donde la Naturaleza se Encuentra con el Lienzo">Donde la Naturaleza se Encuentra con el Lienzo</h2>
+<div class="section-divider"></div>
+<p data-en="Born and raised in Mexico, Roberta Sada is a fine artist whose large-scale oil paintings blur the boundary between reality and art. Her work captures the extraordinary beauty hidden in the natural world — from the delicate veins of a petal to the vast stillness of a forest reflected in water." data-es="Nacida y criada en México, Roberta Sada es una artista plástica cuyas pinturas al óleo de gran formato difuminan la frontera entre la realidad y el arte. Su obra captura la belleza extraordinaria oculta en el mundo natural — desde las delicadas venas de un pétalo hasta la vasta quietud de un bosque reflejado en el agua.">Nacida y criada en México, Roberta Sada es una artista plástica cuyas pinturas al óleo de gran formato difuminan la frontera entre la realidad y el arte. Su obra captura la belleza extraordinaria oculta en el mundo natural — desde las delicadas venas de un pétalo hasta la vasta quietud de un bosque reflejado en el agua.</p>
+<p data-en="Working in oil on canvas, Roberta's realistic approach demands an <em>intimate observation</em> of her subjects. Each painting is a meditation on light, color, and the transient beauty of the living world — rendered at a monumental scale that immerses the viewer completely." data-es="Trabajando en óleo sobre lienzo, el enfoque realista de Roberta exige una <em>observación íntima</em> de sus sujetos. Cada pintura es una meditación sobre la luz, el color y la belleza transitoria del mundo vivo — plasmada a una escala monumental que envuelve completamente al espectador.">Trabajando en óleo sobre lienzo, el enfoque realista de Roberta exige una <em>observación íntima</em> de sus sujetos. Cada pintura es una meditación sobre la luz, el color y la belleza transitoria del mundo vivo — plasmada a una escala monumental que envuelve completamente al espectador.</p>
+<p data-en="Her subjects range from lush botanical compositions and traditional Mexican market scenes to serene waterscapes and evocative portraits — each executed with a precision and sensitivity that invites prolonged contemplation." data-es="Sus temas van desde exuberantes composiciones botánicas y escenas tradicionales del mercado mexicano hasta serenos paisajes acuáticos y retratos evocadores — cada uno ejecutado con una precisión y sensibilidad que invita a la contemplación prolongada.">Sus temas van desde exuberantes composiciones botánicas y escenas tradicionales del mercado mexicano hasta serenos paisajes acuáticos y retratos evocadores — cada uno ejecutado con una precisión y sensibilidad que invita a la contemplación prolongada.</p>
+<div class="about-stats">
+<div><div class="stat-number">97+</div><div class="stat-label" data-en="Works Created" data-es="Obras Creadas">Obras Creadas</div></div>
+<div><div class="stat-number" data-en="Oil" data-es="Óleo">Óleo</div><div class="stat-label" data-en="Primary Medium" data-es="Medio Principal">Medio Principal</div></div>
+<div><div class="stat-number">México</div><div class="stat-label" data-en="Based In" data-es="Ubicación">Ubicación</div></div>
+</div>
+</div>
+</div>
 </section>
-
+ 
 <!-- STATEMENT -->
 <section class="statement">
-  <blockquote class="reveal" data-en="&ldquo;I paint what moves me — the play of light on water, the architecture of petals, the quiet dignity of living things. Each canvas is an invitation to stop, look closer, and discover the extraordinary within the everyday.&rdquo;" data-es="&ldquo;Pinto lo que me conmueve — el juego de la luz sobre el agua, la arquitectura de los pétalos, la dignidad silenciosa de los seres vivos. Cada lienzo es una invitación a detenerse, mirar más de cerca y descubrir lo extraordinario dentro de lo cotidiano.&rdquo;">&ldquo;Pinto lo que me conmueve — el juego de la luz sobre el agua, la arquitectura de los pétalos, la dignidad silenciosa de los seres vivos. Cada lienzo es una invitación a detenerse, mirar más de cerca y descubrir lo extraordinario dentro de lo cotidiano.&rdquo;</blockquote>
-  <cite class="reveal" style="transition-delay:.15s">— Roberta Sada</cite>
+<blockquote class="reveal" data-en="&ldquo;I paint what moves me — the play of light on water, the architecture of petals, the quiet dignity of living things. Each canvas is an invitation to stop, look closer, and discover the extraordinary within the everyday.&rdquo;" data-es="&ldquo;Pinto lo que me conmueve — el juego de la luz sobre el agua, la arquitectura de los pétalos, la dignidad silenciosa de los seres vivos. Cada lienzo es una invitación a detenerse, mirar más de cerca y descubrir lo extraordinario dentro de lo cotidiano.&rdquo;">&ldquo;Pinto lo que me conmueve — el juego de la luz sobre el agua, la arquitectura de los pétalos, la dignidad silenciosa de los seres vivos. Cada lienzo es una invitación a detenerse, mirar más de cerca y descubrir lo extraordinario dentro de lo cotidiano.&rdquo;</blockquote>
+<cite class="reveal" style="transition-delay:.15s">— Roberta Sada</cite>
 </section>
-
+ 
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
-  <div class="gallery-header">
-    <p class="section-label reveal" data-en="Selected Works" data-es="Obras Selectas">Obras Selectas</p>
-    <h2 class="section-title reveal" style="transition-delay:.1s" data-en="Gallery" data-es="Galería">Galería</h2>
-    <div class="gallery-filters reveal" style="transition-delay:.2s">
-      <button class="filter-btn active" data-filter="all" data-en="All Works" data-es="Todas">Todas</button>
-      <button class="filter-btn" data-filter="floral" data-en="Florals" data-es="Florales">Florales</button>
-      <button class="filter-btn" data-filter="bodegon" data-en="Still Life" data-es="Bodegón">Bodegón</button>
-      <button class="filter-btn" data-filter="water" data-en="Water" data-es="Agua">Agua</button>
-      <button class="filter-btn" data-filter="landscape" data-en="Landscapes" data-es="Paisajes">Paisajes</button>
-      <button class="filter-btn" data-filter="other" data-en="Other" data-es="Otros">Otros</button>
-    </div>
-  </div>
-  <div class="gallery-grid" id="galleryGrid"></div>
+<div class="gallery-header">
+<p class="section-label reveal" data-en="Selected Works" data-es="Obras Selectas">Obras Selectas</p>
+<h2 class="section-title reveal" style="transition-delay:.1s" data-en="Gallery" data-es="Galería">Galería</h2>
+<div class="gallery-filters reveal" style="transition-delay:.2s">
+<button class="filter-btn active" data-filter="all" data-en="All Works" data-es="Todas">Todas</button>
+<button class="filter-btn" data-filter="floral" data-en="Florals" data-es="Florales">Florales</button>
+<button class="filter-btn" data-filter="bodegon" data-en="Still Life" data-es="Bodegón">Bodegón</button>
+<button class="filter-btn" data-filter="water" data-en="Water" data-es="Agua">Agua</button>
+<button class="filter-btn" data-filter="landscape" data-en="Landscapes" data-es="Paisajes">Paisajes</button>
+<button class="filter-btn" data-filter="other" data-en="Other" data-es="Otros">Otros</button>
+</div>
+</div>
+<div class="gallery-grid" id="galleryGrid"></div>
 </section>
-
+ 
 <!-- INSTALLED -->
 <section class="installed" id="installed">
-  <div class="installed-inner">
-    <p class="section-label reveal" data-en="In Their New Homes" data-es="En Sus Nuevos Hogares">En Sus Nuevos Hogares</p>
-    <h2 class="section-title reveal" data-en="Installed Works" data-es="Obras Instaladas">Obras Instaladas</h2>
-    <div class="section-divider reveal"></div>
-    <div class="installed-grid" id="installedGrid"></div>
-  </div>
+<div class="installed-inner">
+<p class="section-label reveal" data-en="In Their New Homes" data-es="En Sus Nuevos Hogares">En Sus Nuevos Hogares</p>
+<h2 class="section-title reveal" data-en="Installed Works" data-es="Obras Instaladas">Obras Instaladas</h2>
+<div class="section-divider reveal"></div>
+<div class="installed-grid" id="installedGrid"></div>
+</div>
 </section>
-
+ 
 <!-- AVAILABLE -->
 <section class="available" id="available">
-  <div class="available-inner">
-    <p class="section-label reveal" data-en="Acquire Original Art" data-es="Adquiere Arte Original">Adquiere Arte Original</p>
-    <h2 class="section-title reveal" data-en="Available Works" data-es="Obras En Venta">Obras En Venta</h2>
-    <div class="section-divider reveal" style="margin:0 auto 2rem"></div>
-    <p class="available-text reveal" data-en="Roberta accepts commissions for custom large-scale oil paintings. Inquire about available works or discuss a personalized piece for your space." data-es="Roberta acepta comisiones para pinturas al óleo de gran formato personalizadas. Consulte sobre obras disponibles o comente sobre una pieza personalizada para su espacio.">Roberta acepta comisiones para pinturas al óleo de gran formato personalizadas. Consulte sobre obras disponibles o comente sobre una pieza personalizada para su espacio.</p>
-    <div class="available-grid reveal" id="availableGrid"></div>
-    <a href="#contact" class="inquire-btn" data-en="Inquire About Available Works" data-es="Consultar Obras Disponibles">Consultar Obras Disponibles</a>
-  </div>
+<div class="available-inner">
+<p class="section-label reveal" data-en="Acquire Original Art" data-es="Adquiere Arte Original">Adquiere Arte Original</p>
+<h2 class="section-title reveal" data-en="Available Works" data-es="Obras En Venta">Obras En Venta</h2>
+<div class="section-divider reveal" style="margin:0 auto 2rem"></div>
+<p class="available-text reveal" data-en="Roberta accepts commissions for custom large-scale oil paintings. Inquire about available works or discuss a personalized piece for your space." data-es="Roberta acepta comisiones para pinturas al óleo de gran formato personalizadas. Consulte sobre obras disponibles o comente sobre una pieza personalizada para su espacio.">Roberta acepta comisiones para pinturas al óleo de gran formato personalizadas. Consulte sobre obras disponibles o comente sobre una pieza personalizada para su espacio.</p>
+<div class="available-grid reveal" id="availableGrid"></div>
+<a href="#contact" class="inquire-btn" data-en="Inquire About Available Works" data-es="Consultar Obras Disponibles">Consultar Obras Disponibles</a>
+</div>
 </section>
-
+ 
 <!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
-  <div class="testimonials-inner">
-    <p class="section-label reveal" data-en="What Collectors Say" data-es="Lo Que Dicen Los Coleccionistas">Lo Que Dicen Los Coleccionistas</p>
-    <h2 class="section-title reveal" data-en="Testimonials" data-es="Testimonios">Testimonios</h2>
-    <div class="section-divider reveal"></div>
-    <div class="testimonials-grid" id="testimonialsGrid"></div>
-  </div>
+<div class="testimonials-inner">
+<p class="section-label reveal" data-en="What Collectors Say" data-es="Lo Que Dicen Los Coleccionistas">Lo Que Dicen Los Coleccionistas</p>
+<h2 class="section-title reveal" data-en="Testimonials" data-es="Testimonios">Testimonios</h2>
+<div class="section-divider reveal"></div>
+<div class="testimonials-grid" id="testimonialsGrid"></div>
+</div>
 </section>
-
+ 
 <!-- EXHIBITIONS -->
 <section class="exhibitions" id="exhibitions">
-  <div class="exhibitions-inner">
-    <p class="section-label reveal" data-en="Career Highlights" data-es="Trayectoria">Trayectoria</p>
-    <h2 class="section-title reveal" data-en="Exhibitions & Installations" data-es="Exposiciones e Instalaciones">Exposiciones e Instalaciones</h2>
-    <div class="section-divider reveal"></div>
-    <div class="exhibitions-list" id="exhibitionsList"></div>
-  </div>
+<div class="exhibitions-inner">
+<p class="section-label reveal" data-en="Career Highlights" data-es="Trayectoria">Trayectoria</p>
+<h2 class="section-title reveal" data-en="Exhibitions & Installations" data-es="Exposiciones e Instalaciones">Exposiciones e Instalaciones</h2>
+<div class="section-divider reveal"></div>
+<div class="exhibitions-list" id="exhibitionsList"></div>
+</div>
 </section>
-
+ 
 <!-- EXHIBITION POSTERS -->
 <section class="expo-posters" id="expo-posters">
-  <div class="expo-posters-inner">
-    <p class="section-label reveal" data-en="Invitations & Posters" data-es="Invitaciones y Carteles">Invitaciones y Carteles</p>
-    <h2 class="section-title reveal" data-en="Exhibition Posters" data-es="Carteles de Exposición">Carteles de Exposición</h2>
-    <div class="section-divider reveal"></div>
-    <div class="expo-posters-grid">
-      <div class="reveal">
-        <div class="expo-poster-item"><img src="images/expo_fragancia_de_luz.jpeg" alt="Fragancia de Luz — ETRA Galería 2025" loading="lazy"></div>
-        <div class="expo-poster-caption">
-          <h4 data-en="Fragancia de Luz" data-es="Fragancia de Luz">Fragancia de Luz</h4>
-          <p data-en="ETRA Galería · San Pedro Garza García · September 2025" data-es="ETRA Galería · San Pedro Garza García · Septiembre 2025">ETRA Galería · San Pedro Garza García · Septiembre 2025</p>
-        </div>
-      </div>
-      <div class="reveal" style="transition-delay:.1s">
-        <div class="expo-poster-item"><img src="images/expo_bouquet.jpeg" alt="Bouquet — Akadem" loading="lazy"></div>
-        <div class="expo-poster-caption">
-          <h4 data-en="Bouquet" data-es="Bouquet">Bouquet</h4>
-          <p data-en="Galería Abierta Akadem · San Pedro Garza García · October 2024" data-es="Galería Abierta Akadem · San Pedro Garza García · Octubre 2024">Galería Abierta Akadem · San Pedro Garza García · Octubre 2024</p>
-        </div>
-      </div>
-      <div class="reveal" style="transition-delay:.2s">
-        <div class="expo-poster-item"><img src="images/expo_petalos_de_luz.jpeg" alt="Pétalos de Luz — Akadem" loading="lazy"></div>
-        <div class="expo-poster-caption">
-          <h4 data-en="Pétalos de Luz" data-es="Pétalos de Luz">Pétalos de Luz</h4>
-          <p data-en="Galería Abierta Akadem · San Pedro Garza García · July 2023" data-es="Galería Abierta Akadem · San Pedro Garza García · Julio 2023">Galería Abierta Akadem · San Pedro Garza García · Julio 2023</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="expo-posters-inner">
+<p class="section-label reveal" data-en="Invitations & Posters" data-es="Invitaciones y Carteles">Invitaciones y Carteles</p>
+<h2 class="section-title reveal" data-en="Exhibition Posters" data-es="Carteles de Exposición">Carteles de Exposición</h2>
+<div class="section-divider reveal"></div>
+<div class="expo-posters-grid">
+<div class="reveal">
+<div class="expo-poster-item"><img src="images/expo_fragancia_de_luz.jpeg" alt="Fragancia de Luz — ETRA Galería 2025" loading="lazy"></div>
+<div class="expo-poster-caption">
+<h4 data-en="Fragancia de Luz" data-es="Fragancia de Luz">Fragancia de Luz</h4>
+<p data-en="ETRA Galería · San Pedro Garza García · September 2025" data-es="ETRA Galería · San Pedro Garza García · Septiembre 2025">ETRA Galería · San Pedro Garza García · Septiembre 2025</p>
+</div>
+</div>
+<div class="reveal" style="transition-delay:.1s">
+<div class="expo-poster-item"><img src="images/expo_bouquet.jpeg" alt="Bouquet — Akadem" loading="lazy"></div>
+<div class="expo-poster-caption">
+<h4 data-en="Bouquet" data-es="Bouquet">Bouquet</h4>
+<p data-en="Galería Abierta Akadem · San Pedro Garza García · October 2024" data-es="Galería Abierta Akadem · San Pedro Garza García · Octubre 2024">Galería Abierta Akadem · San Pedro Garza García · Octubre 2024</p>
+</div>
+</div>
+<div class="reveal" style="transition-delay:.2s">
+<div class="expo-poster-item"><img src="images/expo_petalos_de_luz.jpeg" alt="Pétalos de Luz — Akadem" loading="lazy"></div>
+<div class="expo-poster-caption">
+<h4 data-en="Pétalos de Luz" data-es="Pétalos de Luz">Pétalos de Luz</h4>
+<p data-en="Galería Abierta Akadem · San Pedro Garza García · July 2023" data-es="Galería Abierta Akadem · San Pedro Garza García · Julio 2023">Galería Abierta Akadem · San Pedro Garza García · Julio 2023</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
+ 
 <!-- ARTIST AT WORK -->
 <section class="artist-at-work">
-  <div class="artist-at-work-inner">
-    <div class="reveal">
-      <img src="images/artist_at_work.jpeg" alt="Roberta Sada pintando">
-    </div>
-    <div class="artist-at-work-text reveal" style="transition-delay:.15s">
-      <p class="section-label" data-en="The Artist" data-es="La Artista">La Artista</p>
-      <h2 class="section-title" data-en="The Studio" data-es="El Taller">El Taller</h2>
-      <div class="section-divider"></div>
-      <p data-en="Every canvas begins with light. Roberta works at monumental scale — her paintings often measuring two meters or more — capturing the fleeting quality of natural light with meticulous, patient brushwork." data-es="Cada lienzo comienza con la luz. Roberta trabaja a escala monumental — sus pinturas frecuentemente miden dos metros o más — capturando la calidad fugaz de la luz natural con un trabajo de pincel meticuloso y paciente.">Cada lienzo comienza con la luz. Roberta trabaja a escala monumental — sus pinturas frecuentemente miden dos metros o más — capturando la calidad fugaz de la luz natural con un trabajo de pincel meticuloso y paciente.</p>
-      <p data-en="Her realist technique, developed over decades, transforms oil on canvas into windows onto nature — so precise, so luminous, that viewers reach out to touch the petals." data-es="Su técnica realista, desarrollada a lo largo de décadas, transforma el óleo sobre lienzo en ventanas hacia la naturaleza — tan precisas, tan luminosas, que los espectadores desean tocar los pétalos.">Su técnica realista, desarrollada a lo largo de décadas, transforma el óleo sobre lienzo en ventanas hacia la naturaleza — tan precisas, tan luminosas, que los espectadores desean tocar los pétalos.</p>
-    </div>
-  </div>
+<div class="artist-at-work-inner">
+<div class="reveal">
+<img src="images/artist_at_work.jpeg" alt="Roberta Sada pintando">
+</div>
+<div class="artist-at-work-text reveal" style="transition-delay:.15s">
+<p class="section-label" data-en="The Artist" data-es="La Artista">La Artista</p>
+<h2 class="section-title" data-en="The Studio" data-es="El Taller">El Taller</h2>
+<div class="section-divider"></div>
+<p data-en="Every canvas begins with light. Roberta works at monumental scale — her paintings often measuring two meters or more — capturing the fleeting quality of natural light with meticulous, patient brushwork." data-es="Cada lienzo comienza con la luz. Roberta trabaja a escala monumental — sus pinturas frecuentemente miden dos metros o más — capturando la calidad fugaz de la luz natural con un trabajo de pincel meticuloso y paciente.">Cada lienzo comienza con la luz. Roberta trabaja a escala monumental — sus pinturas frecuentemente miden dos metros o más — capturando la calidad fugaz de la luz natural con un trabajo de pincel meticuloso y paciente.</p>
+<p data-en="Her realist technique, developed over decades, transforms oil on canvas into windows onto nature — so precise, so luminous, that viewers reach out to touch the petals." data-es="Su técnica realista, desarrollada a lo largo de décadas, transforma el óleo sobre lienzo en ventanas hacia la naturaleza — tan precisas, tan luminosas, que los espectadores desean tocar los pétalos.">Su técnica realista, desarrollada a lo largo de décadas, transforma el óleo sobre lienzo en ventanas hacia la naturaleza — tan precisas, tan luminosas, que los espectadores desean tocar los pétalos.</p>
+</div>
+</div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="contact-inner">
-    <div class="contact-info reveal">
-      <p class="section-label" data-en="Get in Touch" data-es="Contacto">Contacto</p>
-      <h2 class="section-title" data-en="Inquiries &amp; Commissions" data-es="Consultas y Comisiones">Consultas y Comisiones</h2>
-      <div class="section-divider"></div>
-      <p data-en="For purchase inquiries, commissions, exhibition proposals, or collaboration opportunities, please reach out directly. All works are original oil on canvas paintings." data-es="Para consultas de compra, comisiones, propuestas de exposición u oportunidades de colaboración, comuníquese directamente. Todas las obras son pinturas originales al óleo sobre lienzo.">Para consultas de compra, comisiones, propuestas de exposición u oportunidades de colaboración, comuníquese directamente. Todas las obras son pinturas originales al óleo sobre lienzo.</p>
-      <div class="contact-detail">
-        <div class="contact-detail-label">Email</div>
-        <a href="mailto:sadaroberta13@gmail.com">sadaroberta13@gmail.com</a>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-detail-label">Instagram</div>
-        <a href="https://instagram.com/robertasada" target="_blank" rel="noopener">@robertasada</a>
-      </div>
-      <div class="social-links"><a href="https://instagram.com/robertasada" target="_blank" rel="noopener">Instagram →</a></div>
-    </div>
-    <div class="contact-form reveal" style="transition-delay:.15s">
-      <form id="contactForm" action="https://formsubmit.co/sadaroberta13@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Nueva consulta desde tu sitio web">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <div class="form-group">
-          <label for="name" data-en="Full Name" data-es="Nombre Completo">Nombre Completo</label>
-          <input type="text" id="name" name="name" placeholder="Su nombre" data-placeholder-es="Su nombre" data-placeholder-en="Your name" required>
-        </div>
-        <div class="form-group">
-          <label for="email" data-en="Email Address" data-es="Correo Electrónico">Correo Electrónico</label>
-          <input type="email" id="email" name="email" placeholder="su@email.com" data-placeholder-es="su@email.com" data-placeholder-en="your@email.com" required>
-        </div>
-        <div class="form-group">
-          <label for="interest" data-en="Subject" data-es="Asunto">Asunto</label>
-          <select id="interest" name="interest">
-            <option value="" disabled selected data-en="Select a subject" data-es="Seleccione un asunto">Seleccione un asunto</option>
-            <option value="purchase" data-en="Purchase Inquiry" data-es="Consulta de Compra">Consulta de Compra</option>
-            <option value="commission" data-en="Commission" data-es="Comisión">Comisión</option>
-            <option value="exhibition" data-en="Exhibition Proposal" data-es="Propuesta de Exposición">Propuesta de Exposición</option>
-            <option value="other" data-en="Other" data-es="Otro">Otro</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message" data-en="Message" data-es="Mensaje">Mensaje</label>
-          <textarea id="message" name="message" placeholder="Cuéntenos sobre su consulta..." data-placeholder-es="Cuéntenos sobre su consulta..." data-placeholder-en="Tell us about your inquiry..." required></textarea>
-        </div>
-        <button type="submit" class="submit-btn" data-en="Send Message" data-es="Enviar Mensaje">Enviar Mensaje <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-      </form>
-    </div>
-  </div>
+<div class="contact-inner">
+<div class="contact-info reveal">
+<p class="section-label" data-en="Get in Touch" data-es="Contacto">Contacto</p>
+<h2 class="section-title" data-en="Inquiries &amp; Commissions" data-es="Consultas y Comisiones">Consultas y Comisiones</h2>
+<div class="section-divider"></div>
+<p data-en="For purchase inquiries, commissions, exhibition proposals, or collaboration opportunities, please reach out directly. All works are original oil on canvas paintings." data-es="Para consultas de compra, comisiones, propuestas de exposición u oportunidades de colaboración, comuníquese directamente. Todas las obras son pinturas originales al óleo sobre lienzo.">Para consultas de compra, comisiones, propuestas de exposición u oportunidades de colaboración, comuníquese directamente. Todas las obras son pinturas originales al óleo sobre lienzo.</p>
+<div class="contact-detail">
+<div class="contact-detail-label">Email</div>
+<a href="mailto:sadaroberta13@gmail.com">sadaroberta13@gmail.com</a>
+</div>
+<div class="contact-detail">
+<div class="contact-detail-label">Instagram</div>
+<a href="https://instagram.com/robertasada" target="_blank" rel="noopener">@robertasada</a>
+</div>
+<div class="social-links"><a href="https://instagram.com/robertasada" target="_blank" rel="noopener">Instagram →</a></div>
+</div>
+<div class="contact-form reveal" style="transition-delay:.15s">
+<form id="contactForm" action="https://formsubmit.co/sadaroberta13@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Nueva consulta desde tu sitio web">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<div class="form-group">
+<label for="name" data-en="Full Name" data-es="Nombre Completo">Nombre Completo</label>
+<input type="text" id="name" name="name" placeholder="Su nombre" data-placeholder-es="Su nombre" data-placeholder-en="Your name" required>
+</div>
+<div class="form-group">
+<label for="email" data-en="Email Address" data-es="Correo Electrónico">Correo Electrónico</label>
+<input type="email" id="email" name="email" placeholder="su@email.com" data-placeholder-es="su@email.com" data-placeholder-en="your@email.com" required>
+</div>
+<div class="form-group">
+<label for="interest" data-en="Subject" data-es="Asunto">Asunto</label>
+<select id="interest" name="interest">
+<option value="" disabled selected data-en="Select a subject" data-es="Seleccione un asunto">Seleccione un asunto</option>
+<option value="purchase" data-en="Purchase Inquiry" data-es="Consulta de Compra">Consulta de Compra</option>
+<option value="commission" data-en="Commission" data-es="Comisión">Comisión</option>
+<option value="exhibition" data-en="Exhibition Proposal" data-es="Propuesta de Exposición">Propuesta de Exposición</option>
+<option value="other" data-en="Other" data-es="Otro">Otro</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message" data-en="Message" data-es="Mensaje">Mensaje</label>
+<textarea id="message" name="message" placeholder="Cuéntenos sobre su consulta..." data-placeholder-es="Cuéntenos sobre su consulta..." data-placeholder-en="Tell us about your inquiry..." required></textarea>
+</div>
+<button type="submit" class="submit-btn" data-en="Send Message" data-es="Enviar Mensaje">Enviar Mensaje <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+</form>
+</div>
+</div>
 </section>
-
+ 
 <footer>
-  <div class="footer-logo">Roberta Sada</div>
-  <ul class="footer-links">
-    <li><a href="#about" data-en="About" data-es="Acerca">Acerca</a></li>
-    <li><a href="#gallery" data-en="Gallery" data-es="Galería">Galería</a></li>
-    <li><a href="#installed" data-en="Installed" data-es="Instaladas">Instaladas</a></li>
-    <li><a href="#contact" data-en="Contact" data-es="Contacto">Contacto</a></li>
-  </ul>
-  <p class="footer-copy" data-en="&copy; 2026 Roberta Sada. All rights reserved. All artwork is original oil on canvas." data-es="&copy; 2026 Roberta Sada. Todos los derechos reservados. Toda la obra es óleo original sobre lienzo.">&copy; 2026 Roberta Sada. Todos los derechos reservados. Toda la obra es óleo original sobre lienzo.</p>
+<div class="footer-logo">Roberta Sada</div>
+<ul class="footer-links">
+<li><a href="#about" data-en="About" data-es="Acerca">Acerca</a></li>
+<li><a href="#gallery" data-en="Gallery" data-es="Galería">Galería</a></li>
+<li><a href="#installed" data-en="Installed" data-es="Instaladas">Instaladas</a></li>
+<li><a href="#contact" data-en="Contact" data-es="Contacto">Contacto</a></li>
+</ul>
+<p class="footer-copy" data-en="&copy; 2026 Roberta Sada. All rights reserved. All artwork is original oil on canvas." data-es="&copy; 2026 Roberta Sada. Todos los derechos reservados. Toda la obra es óleo original sobre lienzo.">&copy; 2026 Roberta Sada. Todos los derechos reservados. Toda la obra es óleo original sobre lienzo.</p>
 </footer>
-
+ 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" aria-label="Close">&#10005;</button>
-  <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8592;</button>
-  <button class="lightbox-nav lightbox-next" aria-label="Next">&#8594;</button>
-  <img src="" alt="" id="lightboxImg">
-  <div class="lightbox-info"><h3 id="lightboxTitle"></h3><span id="lightboxMeta"></span></div>
+<button class="lightbox-close" aria-label="Close">&#10005;</button>
+<button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8592;</button>
+<button class="lightbox-nav lightbox-next" aria-label="Next">&#8594;</button>
+<img src="" alt="" id="lightboxImg">
+<div class="lightbox-info"><h3 id="lightboxTitle"></h3><span id="lightboxMeta"></span></div>
 </div>
-
+ 
 <script>
 // ─── DATA ───
 const artworks = [
-  // Original 15
-  {src:'images/Bugambilias_naranjas_2_00_x_1_00.jpeg',title:'Bugambilias Naranjas',size:'200 × 100 cm',category:'floral'},
-  {src:'images/Aspens_1_60_x_1_08.jpeg',title:'Aspens',size:'160 × 108 cm',category:'landscape'},
-  {src:'images/Peonias_Blancas_2_3x2_3_Oct2020.jpeg',title:'Peonías Blancas',size:'230 × 230 cm',category:'floral'},
-  {src:'images/Pantano_1_60_x_1_20.jpeg',title:'Pantano',size:'160 × 120 cm',category:'water'},
-  {src:'images/Ranuculus_44x41pulg.jpeg',title:'Ranúnculus',size:'112 × 104 cm',category:'floral'},
-  {src:'images/El_bosque_2_00_x_1_66.jpeg',title:'El Bosque',size:'200 × 166 cm',category:'landscape'},
-  {src:'images/Nanufares_1_35_x_1_80.jpeg',title:'Nenúfares',size:'135 × 180 cm',category:'water'},
-  {src:'images/Alla__en_la_Fuente_2_x_1_50.jpeg',title:'Allá en la Fuente',size:'200 × 150 cm',category:'water'},
-  {src:'images/20210125_Rosas_blancas.jpeg',title:'Rosas Blancas',size:'Óleo sobre lienzo',category:'floral'},
-  {src:'images/Filodendro_2_00_x_1_20.jpeg',title:'Filodendro',size:'200 × 120 cm',category:'landscape'},
-  {src:'images/Cuadro_flores_4x2.jpeg',title:'Flores',size:'Díptico — 2×(200 × 200 cm)',category:'floral'},
-  {src:'images/Los_perros_1_20_x1_20.jpeg',title:'Los Perros',size:'120 × 120 cm',category:'other'},
-  {src:'images/Tri_ptico_Arbol_Pantano_3_00_x_2_00.jpeg',title:'Tríptico Árbol Pantano',size:'300 × 200 cm',category:'landscape'},
-  {src:'images/Nanufares_con_reflejo_1_35_x_1_80.jpeg',title:'Nenúfares con Reflejo',size:'135 × 180 cm',category:'water'},
-  // Batch 1
-  {src:'images/A_2x2m.jpg',title:'Ranúnculos Naranjas',size:'200 × 200 cm',category:'floral'},
-  {src:'images/AA_2x2m.jpg',title:'Ajos y Elotes',size:'200 × 200 cm',category:'bodegon'},
-  {src:'images/AAA1_1x1m.jpg',title:'Rosa Encendida',size:'100 × 100 cm',category:'floral'},
-  {src:'images/AAA2_1x1m.jpg',title:'Rosa Nostálgica',size:'100 × 100 cm',category:'floral'},
-  {src:'images/AAA3_1x1m.jpg',title:'Rosa Apasionada',size:'100 × 100 cm',category:'floral'},
-  {src:'images/AAA4_1x1m.jpg',title:'Rosa de Otoño',size:'100 × 100 cm',category:'floral'},
-  {src:'images/AAB_1_6x1_4m.jpg',title:'Rosas Durazno',size:'160 × 140 cm',category:'floral'},
-  {src:'images/AAC_2_2x1_5m.jpg',title:'Blancas sobre Negro',size:'220 × 150 cm',category:'floral'},
-  {src:'images/AAD_2_8x1_3m.jpg',title:'Alcachofas y Maíz',size:'280 × 130 cm',category:'bodegon'},
-  {src:'images/AAE_1_8x1_4m.jpg',title:'Lirios y Peonías',size:'180 × 140 cm',category:'floral'},
-  {src:'images/AAF_1_8x0_75m.jpg',title:'Orquídea Roja',size:'180 × 75 cm',category:'floral'},
-  // Batch 2
-  {src:'images/AAG_1_8x0_75m.jpg',title:'Orquídea Rosa',size:'180 × 75 cm',category:'floral'},
-  {src:'images/AAH_1_2x1_2m.jpg',title:'Ranúnculo Amarillo',size:'120 × 120 cm',category:'floral'},
-  {src:'images/AAI_1_2x1_2m.jpg',title:'Ranúnculo de Fuego',size:'120 × 120 cm',category:'floral'},
-  {src:'images/AAJ_1_5x1_5m.jpg',title:'Rosas al Atardecer',size:'150 × 150 cm',category:'floral'},
-  {src:'images/AAL_1x1m.jpg',title:'Bugambilias Rojas',size:'100 × 100 cm',category:'floral'},
-  {src:'images/AAM_1_7x1m.jpg',title:'Alcachofas y Berenjenas',size:'170 × 100 cm',category:'bodegon'},
-  {src:'images/AAN_2x1m.jpg',title:'Peonías en Luz',size:'200 × 100 cm',category:'floral'},
-  {src:'images/AAO_2x1_5m.jpg',title:'Jardín de Colores',size:'200 × 150 cm',category:'floral'},
-  {src:'images/AAP_2_8x1_7m.jpg',title:'Gladiolas Blancas',size:'280 × 170 cm',category:'floral'},
-  {src:'images/AAK_2x1_5m.jpg',title:'Estanque de Koi',size:'200 × 150 cm',category:'water'},
-  // Batch 3
-  {src:'images/AC_1_5x1_5m.jpg',title:'Rosas y Hortensias',size:'150 × 150 cm',category:'floral'},
-  {src:'images/AD_3x_2x2m_.jpg',title:'Tapiz Floral',size:'Tríptico — 3×(200 × 200 cm)',category:'floral'},
-  {src:'images/AE_2x2m.jpg',title:'Elotes Criollos',size:'200 × 200 cm',category:'bodegon'},
-  {src:'images/AF_2x2m.jpg',title:'Bouquet Blanco',size:'200 × 200 cm',category:'floral'},
-  {src:'images/AG_2x2m.jpg',title:'Calas y Crisantemos',size:'200 × 200 cm',category:'floral'},
-  {src:'images/AH_2x2m.jpg',title:'Peonías y Orquídeas',size:'200 × 200 cm',category:'floral'},
-  {src:'images/AI_2x1_5m.jpg',title:'Crisantemos Dorados',size:'200 × 150 cm',category:'floral'},
-  {src:'images/AJ_1x1m.jpg',title:'Clavel al Azul',size:'100 × 100 cm',category:'floral'},
-  {src:'images/AK_2_2x1_5m.jpg',title:'Maíces de México',size:'220 × 150 cm',category:'bodegon'},
-  {src:'images/AL_1_5x1_5m.jpg',title:'Rosas de Ámbar',size:'150 × 150 cm',category:'floral'},
-  {src:'images/AM_2_2x1_5m.jpg',title:'Crisantemos Rosas',size:'220 × 150 cm',category:'floral'},
-  {src:'images/AN_2x_2x1_5m_.jpg',title:'Díptico del Río',size:'Díptico — 2×(200 × 150 cm)',category:'water'},
-  // Batch 4
-  {src:'images/AO_2x1_5m.jpg',title:'Ranúnculos Rojos y Hortensias',size:'200 × 150 cm',category:'floral'},
-  {src:'images/AP_1_2x1_2m.jpg',title:'Peonía al Índigo',size:'120 × 120 cm',category:'floral'},
-  {src:'images/AQ_2_6x1_5m.jpg',title:'Alcachofas en Flor',size:'260 × 150 cm',category:'bodegon'},
-  {src:'images/AR_1_2x1_2m.jpg',title:'Dalia Blanca',size:'120 × 120 cm',category:'floral'},
-  {src:'images/AU_1_5x1_5m.jpg',title:'Maíz Azul',size:'150 × 150 cm',category:'bodegon'},
-  {src:'images/AV_2x1_5m.jpg',title:'Hortensias Blancas',size:'200 × 150 cm',category:'floral'},
-  {src:'images/AX_2_8x1_4m.jpg',title:'Fiesta de Rosas',size:'280 × 140 cm',category:'floral'},
-  {src:'images/AY_1_6x1_4m.jpg',title:'Orquídeas Blancas',size:'160 × 140 cm',category:'floral'},
-  {src:'images/AY2_2x1_5m.jpg',title:'Gladiolas en Jardín',size:'200 × 150 cm',category:'floral'},
-  {src:'images/AZ_1_8x1_4m.jpg',title:'Peonías Abiertas',size:'180 × 140 cm',category:'floral'},
-  // Batch 5
-  {src:'images/B_2x1_4m.jpg',title:'Ranúnculos Blancos',size:'200 × 140 cm',category:'floral'},
-  {src:'images/C_1_6x1_6m.jpg',title:'Ramo de Peonías',size:'160 × 160 cm',category:'floral'},
-  {src:'images/D_2_2x1_5m.jpg',title:'Peonías de Seda',size:'220 × 150 cm',category:'floral'},
-  {src:'images/E_5x_1x2_5m_.jpg',title:'Sinfonía en Blanco',size:'Políptico — 5×(100 × 250 cm)',category:'floral'},
-  {src:'images/F_2_2x1_5m.jpg',title:'Peonías Etéreas',size:'220 × 150 cm',category:'floral'},
-  {src:'images/G_1_6x1_6m.jpg',title:'Dulzura en Rosa',size:'160 × 160 cm',category:'floral'},
-  {src:'images/I_1_6x1_6m.jpg',title:'Primavera Rosa',size:'160 × 160 cm',category:'floral'},
-  {src:'images/J_2x1_4m.jpg',title:'Lisianthus Púrpura',size:'200 × 140 cm',category:'floral'},
-  {src:'images/L_2x1_5m.jpg',title:'Rosas Marfil',size:'200 × 150 cm',category:'floral'},
-  {src:'images/M_1_6x1_4m.jpg',title:'Rosas y Hortensias Azules',size:'160 × 140 cm',category:'floral'},
-  {src:'images/N_2x2m.jpg',title:'Peonías Rosas',size:'200 × 200 cm',category:'floral'},
-  // Batch 6
-  {src:'images/P_1_5x1_5m.jpg',title:'Hortensias Azules',size:'150 × 150 cm',category:'floral'},
-  {src:'images/Q_1_4x1_4m.jpg',title:'Dos Peonías',size:'140 × 140 cm',category:'floral'},
-  {src:'images/R_2x1_5m.jpg',title:'Reflejos y Ondas',size:'200 × 150 cm',category:'water'},
-  {src:'images/S_1x1m.jpg',title:'Peonía al Turquesa',size:'100 × 100 cm',category:'floral'},
-  {src:'images/T_1_5x1_5m.jpg',title:'Rosas de Fuego',size:'150 × 150 cm',category:'floral'},
-  {src:'images/U_1_6x1_6m.jpg',title:'Ranúnculos y Hortensias',size:'160 × 160 cm',category:'floral'},
-  {src:'images/V_1_2x1_2m.jpg',title:'Peonía Blanca',size:'120 × 120 cm',category:'floral'},
-  {src:'images/W_1_8x1m.jpg',title:'Rosas sobre Rojo',size:'180 × 100 cm',category:'floral'},
-  {src:'images/X_2x_2x2m_.jpg',title:'Explosión Floral',size:'Díptico — 2×(200 × 200 cm)',category:'floral'},
-  {src:'images/Y_2x2m.jpg',title:'Bouquet al Azul',size:'200 × 200 cm',category:'floral'},
-  {src:'images/Z_2x2m.jpg',title:'Rosas Inglesas',size:'200 × 200 cm',category:'floral'},
-  // Batch 7
-  {src:'images/AAAA_2x2m.jpg',title:'Rosas Inglesas II',size:'200 × 200 cm',category:'floral'},
-  {src:'images/AAAB_2x2m.jpg',title:'Lisianthus y Tulipanes',size:'200 × 200 cm',category:'floral'},
-  {src:'images/AAQ_2x1_5.jpg',title:'Eucaliptos',size:'200 × 150 cm',category:'landscape'},
-  {src:'images/AAR_2x1_3m.jpg',title:'Rosas Naranjas',size:'200 × 130 cm',category:'floral'},
-  {src:'images/AAS_1x1m.jpg',title:'Peonía Vibrante',size:'100 × 100 cm',category:'floral'},
-  {src:'images/AAT_1x1m.jpg',title:'Peonía Delicada',size:'100 × 100 cm',category:'floral'},
-  {src:'images/AAU_1_6x1_6m.jpg',title:'Rosas Solares',size:'160 × 160 cm',category:'floral'},
-  {src:'images/AAV_1_6x1_6m.jpg',title:'Dos Peonías II',size:'160 × 160 cm',category:'floral'},
-  {src:'images/AAX_2_4x1_2m.jpg',title:'Crisantemos de Oro',size:'240 × 120 cm',category:'floral'},
-  {src:'images/AAY_2x1_5m.jpg',title:'Bouquet Pastel',size:'200 × 150 cm',category:'floral'},
-  {src:'images/AAZ_1_8x1_6m.jpg',title:'Gladiolas Naranjas',size:'180 × 160 cm',category:'floral'},
-  {src:'images/O_2x1_5m.jpg',title:'Gladiolas Rojas',size:'200 × 150 cm',category:'floral'},
-  
-  {src:'images/AB_2x1_5m.jpg',title:'Orquídeas y Rosas Blancas',size:'200 × 150 cm',category:'floral'},
-  {src:'images/painting_tulipanes_azules.png',title:'Tulipanes Azules y Rosas Amarillas',size:'220 × 140 cm',category:'floral'},
-  {src:'images/bugambilias_blancas.png',title:'Bugambilias Blancas',size:'160 × 140 cm',category:'floral'},
-  {src:'images/Entre Calma y Pasion 160x140.jpeg',title:'Entre Calma y Pasión',size:'160 × 140 cm',category:'floral'},
+// Original 15
+{src:'images/Bugambilias_naranjas_2_00_x_1_00.jpeg',titleEs:'Bugambilias Naranjas',titleEn:'Orange Bougainvillea',size:'200 × 100 cm',category:'floral'},
+{src:'images/Aspens_1_60_x_1_08.jpeg',titleEs:'Aspens',titleEn:'Aspens',size:'160 × 108 cm',category:'landscape'},
+{src:'images/Peonias_Blancas_2_3x2_3_Oct2020.jpeg',titleEs:'Peonías Blancas',titleEn:'White Peonies',size:'230 × 230 cm',category:'floral'},
+{src:'images/Pantano_1_60_x_1_20.jpeg',titleEs:'Pantano',titleEn:'Swamp',size:'160 × 120 cm',category:'water'},
+{src:'images/Ranuculus_44x41pulg.jpeg',titleEs:'Ranúnculus',titleEn:'Ranunculus',size:'112 × 104 cm',category:'floral'},
+{src:'images/El_bosque_2_00_x_1_66.jpeg',titleEs:'El Bosque',titleEn:'The Forest',size:'200 × 166 cm',category:'landscape'},
+{src:'images/Nanufares_1_35_x_1_80.jpeg',titleEs:'Nenúfares',titleEn:'Water Lilies',size:'135 × 180 cm',category:'water'},
+{src:'images/Alla__en_la_Fuente_2_x_1_50.jpeg',titleEs:'Allá en la Fuente',titleEn:'At the Fountain',size:'200 × 150 cm',category:'water'},
+{src:'images/20210125_Rosas_blancas.jpeg',titleEs:'Rosas Blancas',titleEn:'White Roses',size:'Óleo sobre lienzo',category:'floral'},
+{src:'images/Filodendro_2_00_x_1_20.jpeg',titleEs:'Filodendro',titleEn:'Philodendron',size:'200 × 120 cm',category:'landscape'},
+{src:'images/Cuadro_flores_4x2.jpeg',titleEs:'Flores',titleEn:'Flowers',size:'Díptico — 2×(200 × 200 cm)',category:'floral'},
+{src:'images/Los_perros_1_20_x1_20.jpeg',titleEs:'Los Perros',titleEn:'The Dogs',size:'120 × 120 cm',category:'other'},
+{src:'images/Tri_ptico_Arbol_Pantano_3_00_x_2_00.jpeg',titleEs:'Tríptico Árbol Pantano',titleEn:'Swamp Tree Triptych',size:'300 × 200 cm',category:'landscape'},
+{src:'images/Nanufares_con_reflejo_1_35_x_1_80.jpeg',titleEs:'Nenúfares con Reflejo',titleEn:'Water Lilies with Reflection',size:'135 × 180 cm',category:'water'},
+// Batch 1
+{src:'images/A_2x2m.jpg',titleEs:'Ranúnculos Naranjas',titleEn:'Orange Ranunculus',size:'200 × 200 cm',category:'floral'},
+{src:'images/AA_2x2m.jpg',titleEs:'Ajos y Elotes',titleEn:'Garlic and Corn',size:'200 × 200 cm',category:'bodegon'},
+{src:'images/AAA1_1x1m.jpg',titleEs:'Rosa Encendida',titleEn:'Burning Rose',size:'100 × 100 cm',category:'floral'},
+{src:'images/AAA2_1x1m.jpg',titleEs:'Rosa Nostálgica',titleEn:'Nostalgic Rose',size:'100 × 100 cm',category:'floral'},
+{src:'images/AAA3_1x1m.jpg',titleEs:'Rosa Apasionada',titleEn:'Passionate Rose',size:'100 × 100 cm',category:'floral'},
+{src:'images/AAA4_1x1m.jpg',titleEs:'Rosa de Otoño',titleEn:'Autumn Rose',size:'100 × 100 cm',category:'floral'},
+{src:'images/AAB_1_6x1_4m.jpg',titleEs:'Rosas Durazno',titleEn:'Peach Roses',size:'160 × 140 cm',category:'floral'},
+{src:'images/AAC_2_2x1_5m.jpg',titleEs:'Blancas sobre Negro',titleEn:'White on Black',size:'220 × 150 cm',category:'floral'},
+{src:'images/AAD_2_8x1_3m.jpg',titleEs:'Alcachofas y Maíz',titleEn:'Artichokes and Corn',size:'280 × 130 cm',category:'bodegon'},
+{src:'images/AAE_1_8x1_4m.jpg',titleEs:'Lirios y Peonías',titleEn:'Irises and Peonies',size:'180 × 140 cm',category:'floral'},
+{src:'images/AAF_1_8x0_75m.jpg',titleEs:'Orquídea Roja',titleEn:'Red Orchid',size:'180 × 75 cm',category:'floral'},
+// Batch 2
+{src:'images/AAG_1_8x0_75m.jpg',titleEs:'Orquídea Rosa',titleEn:'Pink Orchid',size:'180 × 75 cm',category:'floral'},
+{src:'images/AAH_1_2x1_2m.jpg',titleEs:'Ranúnculo Amarillo',titleEn:'Yellow Ranunculus',size:'120 × 120 cm',category:'floral'},
+{src:'images/AAI_1_2x1_2m.jpg',titleEs:'Ranúnculo de Fuego',titleEn:'Fire Ranunculus',size:'120 × 120 cm',category:'floral'},
+{src:'images/AAJ_1_5x1_5m.jpg',titleEs:'Rosas al Atardecer',titleEn:'Roses at Sunset',size:'150 × 150 cm',category:'floral'},
+{src:'images/AAL_1x1m.jpg',titleEs:'Bugambilias Rojas',titleEn:'Red Bougainvillea',size:'100 × 100 cm',category:'floral'},
+{src:'images/AAM_1_7x1m.jpg',titleEs:'Alcachofas y Berenjenas',titleEn:'Artichokes and Eggplant',size:'170 × 100 cm',category:'bodegon'},
+{src:'images/AAN_2x1m.jpg',titleEs:'Peonías en Luz',titleEn:'Peonies in Light',size:'200 × 100 cm',category:'floral'},
+{src:'images/AAO_2x1_5m.jpg',titleEs:'Jardín de Colores',titleEn:'Garden of Colors',size:'200 × 150 cm',category:'floral'},
+{src:'images/AAP_2_8x1_7m.jpg',titleEs:'Gladiolas Blancas',titleEn:'White Gladiolas',size:'280 × 170 cm',category:'floral'},
+{src:'images/AAK_2x1_5m.jpg',titleEs:'Estanque de Koi',titleEn:'Koi Pond',size:'200 × 150 cm',category:'water'},
+// Batch 3
+{src:'images/AC_1_5x1_5m.jpg',titleEs:'Rosas y Hortensias',titleEn:'Roses and Hydrangeas',size:'150 × 150 cm',category:'floral'},
+{src:'images/AD_3x_2x2m_.jpg',titleEs:'Tapiz Floral',titleEn:'Floral Tapestry',size:'Tríptico — 3×(200 × 200 cm)',category:'floral'},
+{src:'images/AE_2x2m.jpg',titleEs:'Elotes Criollos',titleEn:'Heirloom Corn',size:'200 × 200 cm',category:'bodegon'},
+{src:'images/AF_2x2m.jpg',titleEs:'Bouquet Blanco',titleEn:'White Bouquet',size:'200 × 200 cm',category:'floral'},
+{src:'images/AG_2x2m.jpg',titleEs:'Calas y Crisantemos',titleEn:'Calla Lilies and Chrysanthemums',size:'200 × 200 cm',category:'floral'},
+{src:'images/AH_2x2m.jpg',titleEs:'Peonías y Orquídeas',titleEn:'Peonies and Orchids',size:'200 × 200 cm',category:'floral'},
+{src:'images/AI_2x1_5m.jpg',titleEs:'Crisantemos Dorados',titleEn:'Golden Chrysanthemums',size:'200 × 150 cm',category:'floral'},
+{src:'images/AJ_1x1m.jpg',titleEs:'Clavel al Azul',titleEn:'Carnation in Blue',size:'100 × 100 cm',category:'floral'},
+{src:'images/AK_2_2x1_5m.jpg',titleEs:'Maíces de México',titleEn:'Corns of Mexico',size:'220 × 150 cm',category:'bodegon'},
+{src:'images/AL_1_5x1_5m.jpg',titleEs:'Rosas de Ámbar',titleEn:'Amber Roses',size:'150 × 150 cm',category:'floral'},
+{src:'images/AM_2_2x1_5m.jpg',titleEs:'Crisantemos Rosas',titleEn:'Pink Chrysanthemums',size:'220 × 150 cm',category:'floral'},
+{src:'images/AN_2x_2x1_5m_.jpg',titleEs:'Díptico del Río',titleEn:'River Diptych',size:'Díptico — 2×(200 × 150 cm)',category:'water'},
+// Batch 4
+{src:'images/AO_2x1_5m.jpg',titleEs:'Ranúnculos Rojos y Hortensias',titleEn:'Red Ranunculus and Hydrangeas',size:'200 × 150 cm',category:'floral'},
+{src:'images/AP_1_2x1_2m.jpg',titleEs:'Peonía al Índigo',titleEn:'Peony in Indigo',size:'120 × 120 cm',category:'floral'},
+{src:'images/AQ_2_6x1_5m.jpg',titleEs:'Alcachofas en Flor',titleEn:'Artichokes in Bloom',size:'260 × 150 cm',category:'bodegon'},
+{src:'images/AR_1_2x1_2m.jpg',titleEs:'Dalia Blanca',titleEn:'White Dahlia',size:'120 × 120 cm',category:'floral'},
+{src:'images/AU_1_5x1_5m.jpg',titleEs:'Maíz Azul',titleEn:'Blue Corn',size:'150 × 150 cm',category:'bodegon'},
+{src:'images/AV_2x1_5m.jpg',titleEs:'Hortensias Blancas',titleEn:'White Hydrangeas',size:'200 × 150 cm',category:'floral'},
+{src:'images/AX_2_8x1_4m.jpg',titleEs:'Fiesta de Rosas',titleEn:'Festival of Roses',size:'280 × 140 cm',category:'floral'},
+{src:'images/AY_1_6x1_4m.jpg',titleEs:'Orquídeas Blancas',titleEn:'White Orchids',size:'160 × 140 cm',category:'floral'},
+{src:'images/AY2_2x1_5m.jpg',titleEs:'Gladiolas en Jardín',titleEn:'Gladiolas in Garden',size:'200 × 150 cm',category:'floral'},
+{src:'images/AZ_1_8x1_4m.jpg',titleEs:'Peonías Abiertas',titleEn:'Open Peonies',size:'180 × 140 cm',category:'floral'},
+// Batch 5
+{src:'images/B_2x1_4m.jpg',titleEs:'Ranúnculos Blancos',titleEn:'White Ranunculus',size:'200 × 140 cm',category:'floral'},
+{src:'images/C_1_6x1_6m.jpg',titleEs:'Ramo de Peonías',titleEn:'Bouquet of Peonies',size:'160 × 160 cm',category:'floral'},
+{src:'images/D_2_2x1_5m.jpg',titleEs:'Peonías de Seda',titleEn:'Silk Peonies',size:'220 × 150 cm',category:'floral'},
+{src:'images/E_5x_1x2_5m_.jpg',titleEs:'Sinfonía en Blanco',titleEn:'Symphony in White',size:'Políptico — 5×(100 × 250 cm)',category:'floral'},
+{src:'images/F_2_2x1_5m.jpg',titleEs:'Peonías Etéreas',titleEn:'Ethereal Peonies',size:'220 × 150 cm',category:'floral'},
+{src:'images/G_1_6x1_6m.jpg',titleEs:'Dulzura en Rosa',titleEn:'Sweetness in Pink',size:'160 × 160 cm',category:'floral'},
+{src:'images/I_1_6x1_6m.jpg',titleEs:'Primavera Rosa',titleEn:'Pink Spring',size:'160 × 160 cm',category:'floral'},
+{src:'images/J_2x1_4m.jpg',titleEs:'Lisianthus Púrpura',titleEn:'Purple Lisianthus',size:'200 × 140 cm',category:'floral'},
+{src:'images/L_2x1_5m.jpg',titleEs:'Rosas Marfil',titleEn:'Ivory Roses',size:'200 × 150 cm',category:'floral'},
+{src:'images/M_1_6x1_4m.jpg',titleEs:'Rosas y Hortensias Azules',titleEn:'Roses and Blue Hydrangeas',size:'160 × 140 cm',category:'floral'},
+{src:'images/N_2x2m.jpg',titleEs:'Peonías Rosas',titleEn:'Pink Peonies',size:'200 × 200 cm',category:'floral'},
+// Batch 6
+{src:'images/P_1_5x1_5m.jpg',titleEs:'Hortensias Azules',titleEn:'Blue Hydrangeas',size:'150 × 150 cm',category:'floral'},
+{src:'images/Q_1_4x1_4m.jpg',titleEs:'Dos Peonías',titleEn:'Two Peonies',size:'140 × 140 cm',category:'floral'},
+{src:'images/R_2x1_5m.jpg',titleEs:'Reflejos y Ondas',titleEn:'Reflections and Ripples',size:'200 × 150 cm',category:'water'},
+{src:'images/S_1x1m.jpg',titleEs:'Peonía al Turquesa',titleEn:'Peony in Turquoise',size:'100 × 100 cm',category:'floral'},
+{src:'images/T_1_5x1_5m.jpg',titleEs:'Rosas de Fuego',titleEn:'Fire Roses',size:'150 × 150 cm',category:'floral'},
+{src:'images/U_1_6x1_6m.jpg',titleEs:'Ranúnculos y Hortensias',titleEn:'Ranunculus and Hydrangeas',size:'160 × 160 cm',category:'floral'},
+{src:'images/V_1_2x1_2m.jpg',titleEs:'Peonía Blanca',titleEn:'White Peony',size:'120 × 120 cm',category:'floral'},
+{src:'images/W_1_8x1m.jpg',titleEs:'Rosas sobre Rojo',titleEn:'Roses on Red',size:'180 × 100 cm',category:'floral'},
+{src:'images/X_2x_2x2m_.jpg',titleEs:'Explosión Floral',titleEn:'Floral Explosion',size:'Díptico — 2×(200 × 200 cm)',category:'floral'},
+{src:'images/Y_2x2m.jpg',titleEs:'Bouquet al Azul',titleEn:'Bouquet in Blue',size:'200 × 200 cm',category:'floral'},
+{src:'images/Z_2x2m.jpg',titleEs:'Rosas Inglesas',titleEn:'English Roses',size:'200 × 200 cm',category:'floral'},
+// Batch 7
+{src:'images/AAAA_2x2m.jpg',titleEs:'Rosas Inglesas II',titleEn:'English Roses II',size:'200 × 200 cm',category:'floral'},
+{src:'images/AAAB_2x2m.jpg',titleEs:'Lisianthus y Tulipanes',titleEn:'Lisianthus and Tulips',size:'200 × 200 cm',category:'floral'},
+{src:'images/AAQ_2x1_5.jpg',titleEs:'Eucaliptos',titleEn:'Eucalyptus',size:'200 × 150 cm',category:'landscape'},
+{src:'images/AAR_2x1_3m.jpg',titleEs:'Rosas Naranjas',titleEn:'Orange Roses',size:'200 × 130 cm',category:'floral'},
+{src:'images/AAS_1x1m.jpg',titleEs:'Peonía Vibrante',titleEn:'Vibrant Peony',size:'100 × 100 cm',category:'floral'},
+{src:'images/AAT_1x1m.jpg',titleEs:'Peonía Delicada',titleEn:'Delicate Peony',size:'100 × 100 cm',category:'floral'},
+{src:'images/AAU_1_6x1_6m.jpg',titleEs:'Rosas Solares',titleEn:'Solar Roses',size:'160 × 160 cm',category:'floral'},
+{src:'images/AAV_1_6x1_6m.jpg',titleEs:'Dos Peonías II',titleEn:'Two Peonies II',size:'160 × 160 cm',category:'floral'},
+{src:'images/AAX_2_4x1_2m.jpg',titleEs:'Crisantemos de Oro',titleEn:'Gold Chrysanthemums',size:'240 × 120 cm',category:'floral'},
+{src:'images/AAY_2x1_5m.jpg',titleEs:'Bouquet Pastel',titleEn:'Pastel Bouquet',size:'200 × 150 cm',category:'floral'},
+{src:'images/AAZ_1_8x1_6m.jpg',titleEs:'Gladiolas Naranjas',titleEn:'Orange Gladiolas',size:'180 × 160 cm',category:'floral'},
+{src:'images/O_2x1_5m.jpg',titleEs:'Gladiolas Rojas',titleEn:'Red Gladiolas',size:'200 × 150 cm',category:'floral'},
+{src:'images/AB_2x1_5m.jpg',titleEs:'Orquídeas y Rosas Blancas',titleEn:'Orchids and White Roses',size:'200 × 150 cm',category:'floral'},
+{src:'images/painting_tulipanes_azules.png',titleEs:'Tulipanes Azules y Rosas Amarillas',titleEn:'Blue Tulips and Yellow Roses',size:'220 × 140 cm',category:'floral'},
+{src:'images/bugambilias_blancas.png',titleEs:'Bugambilias Blancas',titleEn:'White Bougainvillea',size:'160 × 140 cm',category:'floral'},
+{src:'images/Entre Calma y Pasion 160x140.jpeg',titleEs:'Entre Calma y Pasión',titleEn:'Between Calm and Passion',size:'160 × 140 cm',category:'floral'},
+// NEW PAINTING
+{src:'images/Ranunculos_hortensias_y_crisantemos_2x1_5m.jpeg',titleEs:'Ranúnculos, Hortensias y Crisantemos',titleEn:'Ranunculus, Hydrangeas and Chrysanthemums',size:'200 × 150 cm',category:'floral'},
 ];
-
+ 
 const installedWorks = [
-  {src:'images/installed_tapiz_floral_dallas.png',title:'Tapiz Floral ★',location:'The Mexican — Dallas, TX',titleEn:'Tapiz Floral ★',locationEn:'The Mexican — Dallas, TX',featured:true},
-  {src:'images/AS_3x_2x2m__hanged.jpg',title:'Tapiz Floral — Tríptico',location:'The Mexican — Dallas, TX',titleEn:'Tapiz Floral — Triptych',locationEn:'The Mexican — Dallas, TX'},
-  {src:'images/installed_peonias_blanco_verde.png',title:'Peonías Blanco y Verde',location:'Colección privada',titleEn:'White & Green Peonies',locationEn:'Private collection'},
-  {src:'images/installed_tres_peonias_rosas.png',title:'Tres Peonías Rosas',location:'Colección privada',titleEn:'Three Pink Peonies',locationEn:'Private collection'},
-  {src:'images/installed_gladiolos_blancos.jpeg',title:'Gladiolos Blancos',location:'Colección privada',titleEn:'White Gladiolas',locationEn:'Private collection'},
-  {src:'images/installed_koi_pond.jpeg',title:'Estanque de Koi',location:'Colección privada',titleEn:'Koi Pond',locationEn:'Private collection'},
-  {src:'images/installed_peonias_blancas.jpeg',title:'Peonías Blancas',location:'Colección privada',titleEn:'White Peonies',locationEn:'Private collection'},
-  {src:'images/installed_dalia_blanca.jpeg',title:'Dalia Blanca',location:'Colección privada',titleEn:'White Dahlia',locationEn:'Private collection'},
-  {src:'images/installed_crisantemo_dorado.jpeg',title:'Crisantemo Dorado',location:'Colección privada',titleEn:'Golden Chrysanthemum',locationEn:'Private collection'},
-  {src:'images/installed_rosa_fucsia.jpeg',title:'Rosa Fucsia',location:'Colección privada',titleEn:'Fuchsia Rose',locationEn:'Private collection'},
-  {src:'images/installed_alcachofas.jpeg',title:'Alcachofas y Berenjenas',location:'Colección privada',titleEn:'Artichokes & Eggplant',locationEn:'Private collection'},
-  {src:'images/event_tapiz_floral_1.jpeg',title:'Sinfonías en Blanco',location:'Colección privada — evento',titleEn:'Sinfonías en Blanco',locationEn:'Private collection — event'},
-  {src:'images/event_tapiz_floral_2.jpeg',title:'Sinfonías en Blanco',location:'Colección privada — evento',titleEn:'Sinfonías en Blanco',locationEn:'Private collection — event'},
-  {src:'images/AAO_2x1_5m_hanged.jpg',title:'Jardín de Colores',location:'Colección privada',titleEn:'Garden of Colors',locationEn:'Private collection'},
-  {src:'images/AT__2x1_5m__hanged.jpg',title:'Fiesta de Rosas',location:'Colección privada',titleEn:'Fiesta de Rosas',locationEn:'Private collection'},
+{src:'images/installed_tapiz_floral_dallas.png',titleEs:'Tapiz Floral ★',titleEn:'Tapiz Floral ★',locationEs:'The Mexican — Dallas, TX',locationEn:'The Mexican — Dallas, TX',featured:true},
+{src:'images/AS_3x_2x2m__hanged.jpg',titleEs:'Tapiz Floral — Tríptico',titleEn:'Tapiz Floral — Triptych',locationEs:'The Mexican — Dallas, TX',locationEn:'The Mexican — Dallas, TX'},
+{src:'images/installed_peonias_blanco_verde.png',titleEs:'Peonías Blanco y Verde',titleEn:'White & Green Peonies',locationEs:'Colección privada',locationEn:'Private collection'},
+{src:'images/installed_tres_peonias_rosas.png',titleEs:'Tres Peonías Rosas',titleEn:'Three Pink Peonies',locationEs:'Colección privada',locationEn:'Private collection'},
+{src:'images/installed_gladiolos_blancos.jpeg',titleEs:'Gladiolos Blancos',titleEn:'White Gladiolas',locationEs:'Colección privada',locationEn:'Private collection'},
+{src:'images/installed_koi_pond.jpeg',titleEs:'Estanque de Koi',titleEn:'Koi Pond',locationEs:'Colección privada',locationEn:'Private collection'},
+{src:'images/installed_peonias_blancas.jpeg',titleEs:'Peonías Blancas',titleEn:'White Peonies',locationEs:'Colección privada',locationEn:'Private collection'},
+{src:'images/installed_dalia_blanca.jpeg',titleEs:'Dalia Blanca',titleEn:'White Dahlia',locationEs:'Colección privada',locationEn:'Private collection'},
+{src:'images/installed_crisantemo_dorado.jpeg',titleEs:'Crisantemo Dorado',titleEn:'Golden Chrysanthemum',locationEs:'Colección privada',locationEn:'Private collection'},
+{src:'images/installed_rosa_fucsia.jpeg',titleEs:'Rosa Fucsia',titleEn:'Fuchsia Rose',locationEs:'Colección privada',locationEn:'Private collection'},
+{src:'images/installed_alcachofas.jpeg',titleEs:'Alcachofas y Berenjenas',titleEn:'Artichokes & Eggplant',locationEs:'Colección privada',locationEn:'Private collection'},
+{src:'images/event_tapiz_floral_1.jpeg',titleEs:'Sinfonías en Blanco',titleEn:'Sinfonías en Blanco',locationEs:'Colección privada — evento',locationEn:'Private collection — event'},
+{src:'images/event_tapiz_floral_2.jpeg',titleEs:'Sinfonías en Blanco',titleEn:'Sinfonías en Blanco',locationEs:'Colección privada — evento',locationEn:'Private collection — event'},
+{src:'images/AAO_2x1_5m_hanged.jpg',titleEs:'Jardín de Colores',titleEn:'Garden of Colors',locationEs:'Colección privada',locationEn:'Private collection'},
+{src:'images/AT__2x1_5m__hanged.jpg',titleEs:'Fiesta de Rosas',titleEn:'Fiesta de Rosas',locationEs:'Colección privada',locationEn:'Private collection'},
 ];
-
+ 
 const testimonials = {
-  es: [
-    {text:'Como Zeus, poderosa, lanza sus rayos de luz sobre los lienzos — los usa para que las flores desplieguen su fragancia y nos adviertan sobre el deseo, la naturaleza en su esplendor. Universo en donde el color es domeñado y dirigido exactamente donde debe de ir, oficio al servicio de un homenaje a la tierra.',author:'Jorge García Murillo',location:'Crítico de Arte · Septiembre 2025'},
-    {text:'Su talento como artista es enorme; se deja llevar por su intuición, es disciplinada y su objetivo siempre es certero. Y como dijo un amigo y buen crítico de arte: "Roberta no pinta objetos, pinta la luz".',author:'Mauricio Gattas',location:'Maestro · Crítico y Valuador de Arte'},
-    {text:'Admiro su disciplina, dedicación y la rapidez con la que realiza sus obras. Su trazo se caracteriza por la fuerza, perfección y belleza con que representa los paisajes, las flores o la naturaleza muerta en grandes formatos. Al contemplarlos, me llenan de alegría y paz.',author:'Karla Gracida',location:'Artista · Colega'},
-    {text:'Sus obras reflejan la perfecta armonía entre mente y manos. Eres como una nube cargada de talento exorbitante. El mundo es más bello por tus obras y la madre naturaleza se enorgullece tal como yo de disfrutar tus creaciones.',author:'Manuel Rubio Lamas',location:'Coleccionista'},
-  ],
-  en: [
-    {text:'Like Zeus, powerful, she casts her rays of light onto the canvases — she uses them so that flowers unfurl their fragrance and awaken us to desire, nature in its splendor. A universe where color is mastered and guided precisely where it must go, a craft in service of a tribute to the earth.',author:'Jorge García Murillo',location:'Art Critic · September 2025'},
-    {text:'Her talent as an artist is enormous; she follows her intuition, is disciplined, and her aim is always true. As a friend and art critic once said: "Roberta does not paint objects — she paints light."',author:'Mauricio Gattas',location:'Teacher · Art Critic & Valuator'},
-    {text:'I admire her discipline, dedication and the speed with which she creates. Her brushwork is characterized by the strength, perfection and beauty with which she renders landscapes, flowers and still lifes in large formats. Contemplating them fills me with joy and peace.',author:'Karla Gracida',location:'Artist · Colleague'},
-    {text:'Her works reflect the perfect harmony between mind and hands. You are like a cloud charged with extraordinary talent. The world is more beautiful for your creations and Mother Nature is as proud as I am to enjoy them.',author:'Manuel Rubio Lamas',location:'Collector'},
-  ]
+es: [
+{text:'Como Zeus, poderosa, lanza sus rayos de luz sobre los lienzos — los usa para que las flores desplieguen su fragancia y nos adviertan sobre el deseo, la naturaleza en su esplendor. Universo en donde el color es domeñado y dirigido exactamente donde debe de ir, oficio al servicio de un homenaje a la tierra.',author:'Jorge García Murillo',location:'Crítico de Arte · Septiembre 2025'},
+{text:'Su talento como artista es enorme; se deja llevar por su intuición, es disciplinada y su objetivo siempre es certero. Y como dijo un amigo y buen crítico de arte: "Roberta no pinta objetos, pinta la luz".',author:'Mauricio Gattas',location:'Maestro · Crítico y Valuador de Arte'},
+{text:'Admiro su disciplina, dedicación y la rapidez con la que realiza sus obras. Su trazo se caracteriza por la fuerza, perfección y belleza con que representa los paisajes, las flores o la naturaleza muerta en grandes formatos. Al contemplarlos, me llenan de alegría y paz.',author:'Karla Gracida',location:'Artista · Colega'},
+{text:'Sus obras reflejan la perfecta armonía entre mente y manos. Eres como una nube cargada de talento exorbitante. El mundo es más bello por tus obras y la madre naturaleza se enorgullece tal como yo de disfrutar tus creaciones.',author:'Manuel Rubio Lamas',location:'Coleccionista'},
+],
+en: [
+{text:'Like Zeus, powerful, she casts her rays of light onto the canvases — she uses them so that flowers unfurl their fragrance and awaken us to desire, nature in its splendor. A universe where color is mastered and guided precisely where it must go, a craft in service of a tribute to the earth.',author:'Jorge García Murillo',location:'Art Critic · September 2025'},
+{text:'Her talent as an artist is enormous; she follows her intuition, is disciplined, and her aim is always true. As a friend and art critic once said: "Roberta does not paint objects — she paints light."',author:'Mauricio Gattas',location:'Teacher · Art Critic & Valuator'},
+{text:'I admire her discipline, dedication and the speed with which she creates. Her brushwork is characterized by the strength, perfection and beauty with which she renders landscapes, flowers and still lifes in large formats. Contemplating them fills me with joy and peace.',author:'Karla Gracida',location:'Artist · Colleague'},
+{text:'Her works reflect the perfect harmony between mind and hands. You are like a cloud charged with extraordinary talent. The world is more beautiful for your creations and Mother Nature is as proud as I am to enjoy them.',author:'Manuel Rubio Lamas',location:'Collector'},
+]
 };
-
+ 
 const exhibitions = {
-  es: [
-    {year:'2025',title:'Fragancia de Luz — ETRA Galería',desc:'Vasconcelos #301, Col. Bosques del Valle, San Pedro Garza García, NL · Septiembre 2025'},
-    {year:'2025',title:'Instalación Permanente — The Mexican',desc:'Dallas, TX. Tríptico Tapiz Floral (3 paneles, 200 × 200 cm cada uno)'},
-    {year:'2024',title:'Bouquet — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Inauguración: 18 de octubre, 19–22 hrs'},
-    {year:'2023',title:'Pétalos de Luz — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Inauguración: 19 de julio, 19–22 hrs'},
-    {year:'Continuo',title:'Colecciones Privadas',desc:'Obras instaladas en residencias y espacios comerciales en México y Estados Unidos'},
-  ],
-  en: [
-    {year:'2025',title:'Fragancia de Luz — ETRA Galería',desc:'Vasconcelos #301, Col. Bosques del Valle, San Pedro Garza García, NL · September 2025'},
-    {year:'2025',title:'Permanent Installation — The Mexican',desc:'Dallas, TX. Tapiz Floral Triptych (3 panels, 200 × 200 cm each)'},
-    {year:'2024',title:'Bouquet — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Opening: October 18, 7–10 pm'},
-    {year:'2023',title:'Pétalos de Luz — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Opening: July 19, 7–10 pm'},
-    {year:'Ongoing',title:'Private Collections',desc:'Works installed in residences and commercial spaces across Mexico and the United States'},
-  ]
+es: [
+{year:'2025',title:'Fragancia de Luz — ETRA Galería',desc:'Vasconcelos #301, Col. Bosques del Valle, San Pedro Garza García, NL · Septiembre 2025'},
+{year:'2025',title:'Instalación Permanente — The Mexican',desc:'Dallas, TX. Tríptico Tapiz Floral (3 paneles, 200 × 200 cm cada uno)'},
+{year:'2024',title:'Bouquet — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Inauguración: 18 de octubre, 19–22 hrs'},
+{year:'2023',title:'Pétalos de Luz — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Inauguración: 19 de julio, 19–22 hrs'},
+{year:'Continuo',title:'Colecciones Privadas',desc:'Obras instaladas en residencias y espacios comerciales en México y Estados Unidos'},
+],
+en: [
+{year:'2025',title:'Fragancia de Luz — ETRA Galería',desc:'Vasconcelos #301, Col. Bosques del Valle, San Pedro Garza García, NL · September 2025'},
+{year:'2025',title:'Permanent Installation — The Mexican',desc:'Dallas, TX. Tapiz Floral Triptych (3 panels, 200 × 200 cm each)'},
+{year:'2024',title:'Bouquet — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Opening: October 18, 7–10 pm'},
+{year:'2023',title:'Pétalos de Luz — Galería Abierta Akadem',desc:'Río Suchiate 722, San Pedro Garza García · Opening: July 19, 7–10 pm'},
+{year:'Ongoing',title:'Private Collections',desc:'Works installed in residences and commercial spaces across Mexico and the United States'},
+]
 };
-
+ 
 // ─── LANGUAGE ───
 let lang = 'es';
+ 
+function getTitle(art) {
+  return lang === 'en' ? art.titleEn : art.titleEs;
+}
+ 
 function setLang(l) {
   lang = l;
   document.getElementById('langToggle').textContent = l === 'es' ? 'EN' : 'ES';
@@ -696,15 +680,20 @@ function setLang(l) {
   document.querySelectorAll('[data-placeholder-'+l+']').forEach(el => {
     el.placeholder = el.getAttribute('data-placeholder-'+l);
   });
+  // Re-render dynamic sections with new language
+  const activeFilter = document.querySelector('.filter-btn.active');
+  renderGallery(activeFilter ? activeFilter.dataset.filter : 'all');
+  renderInstalled();
   renderTestimonials();
   renderExhibitions();
   renderAvailable();
 }
+ 
 document.getElementById('langToggle').addEventListener('click', () => setLang(lang === 'es' ? 'en' : 'es'));
-
+ 
 // ─── PRELOADER ───
 window.addEventListener('load', () => { setTimeout(() => document.querySelector('.preloader').classList.add('hidden'), 1800); });
-
+ 
 // ─── NAV ───
 const nav = document.getElementById('navbar');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80));
@@ -717,23 +706,29 @@ hamburger.addEventListener('click', () => {
 document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
   hamburger.classList.remove('active'); mobileMenu.classList.remove('active'); document.body.style.overflow = '';
 }));
-
+ 
 // ─── GALLERY ───
 const grid = document.getElementById('galleryGrid');
+let currentFiltered = [];
+ 
 function renderGallery(filter) {
   grid.innerHTML = '';
-  const filtered = filter === 'all' ? artworks : artworks.filter(a => a.category === filter);
-  filtered.forEach((art, i) => {
+  currentFiltered = filter === 'all' ? artworks : artworks.filter(a => a.category === filter);
+  currentFiltered.forEach((art, i) => {
     const item = document.createElement('div');
     item.className = 'gallery-item';
     item.style.transitionDelay = `${Math.min(i * 0.04, 0.6)}s`;
-    item.innerHTML = `<img src="${art.src}" alt="${art.title}" loading="lazy"><div class="gallery-overlay"><h3>${art.title}</h3><span>${art.size} · Óleo sobre lienzo</span></div>`;
-    item.addEventListener('click', () => openLightbox(filtered, filtered.indexOf(art)));
+    const title = getTitle(art);
+    const mediumLabel = lang === 'en' ? 'Oil on canvas' : 'Óleo sobre lienzo';
+    item.innerHTML = `<img src="${art.src}" alt="${title}" loading="lazy"><div class="gallery-overlay"><h3>${title}</h3><span>${art.size} · ${mediumLabel}</span></div>`;
+    item.addEventListener('click', () => openLightbox(currentFiltered, i));
     grid.appendChild(item);
     requestAnimationFrame(() => requestAnimationFrame(() => item.classList.add('visible')));
   });
 }
+ 
 renderGallery('all');
+ 
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -741,42 +736,53 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     renderGallery(btn.dataset.filter);
   });
 });
-
-const availableWorks = [
-  {src:'images/bugambilias_blancas.png',title:'Bugambilias Blancas',titleEn:'White Bougainvillea',size:'160 × 140 cm'},
-  {src:'images/AAA1_1x1m.jpg',title:'Rosa Encendida',titleEn:'Rosa Encendida',size:'100 × 100 cm'},
-  {src:'images/Entre Calma y Pasion 160x140.jpeg',title:'Entre Calma y Pasión',titleEn:'Between Calm and Passion',size:'160 × 140 cm'},
-];
-
+ 
 // ─── AVAILABLE ───
+const availableWorks = [
+{src:'images/bugambilias_blancas.png',titleEs:'Bugambilias Blancas',titleEn:'White Bougainvillea',size:'160 × 140 cm'},
+{src:'images/AAA1_1x1m.jpg',titleEs:'Rosa Encendida',titleEn:'Burning Rose',size:'100 × 100 cm'},
+{src:'images/Entre Calma y Pasion 160x140.jpeg',titleEs:'Entre Calma y Pasión',titleEn:'Between Calm and Passion',size:'160 × 140 cm'},
+];
+ 
 function renderAvailable() {
   const aGrid = document.getElementById('availableGrid');
   aGrid.innerHTML = '';
   availableWorks.forEach(w => {
     const card = document.createElement('div');
     card.className = 'available-card';
-    const t = lang === 'en' ? w.titleEn : w.title;
+    const t = getTitle(w);
+    const badgeLabel = lang === 'en' ? 'Available' : 'Disponible';
+    const mediumLabel = lang === 'en' ? 'Oil on canvas' : 'Óleo sobre lienzo';
     card.innerHTML = `
-      <div class="available-badge" data-en="Available" data-es="Disponible">${lang === 'en' ? 'Available' : 'Disponible'}</div>
-      <img src="${w.src}" alt="${t}" loading="lazy">
-      <div class="available-card-info">
-        <h4>${t}</h4>
-        <span>${w.size} · Óleo sobre lienzo</span>
-      </div>`;
+<div class="available-badge">${badgeLabel}</div>
+<img src="${w.src}" alt="${t}" loading="lazy">
+<div class="available-card-info">
+<h4>${t}</h4>
+<span>${w.size} · ${mediumLabel}</span>
+</div>`;
     aGrid.appendChild(card);
   });
 }
+ 
 renderAvailable();
-const iGrid = document.getElementById('installedGrid');
-installedWorks.forEach(w => {
-  const item = document.createElement('div');
-  item.className = 'installed-item reveal' + (w.featured ? ' featured' : '');
-  const t = lang === 'en' ? w.titleEn : w.title;
-  const loc = lang === 'en' ? w.locationEn : w.location;
-  item.innerHTML = `<img src="${w.src}" alt="${t}" loading="lazy"><div class="installed-caption"><h4>${t}</h4><p>${loc}</p></div>`;
-  iGrid.appendChild(item);
-});
-
+ 
+// ─── INSTALLED ───
+function renderInstalled() {
+  const iGrid = document.getElementById('installedGrid');
+  iGrid.innerHTML = '';
+  installedWorks.forEach(w => {
+    const item = document.createElement('div');
+    item.className = 'installed-item reveal' + (w.featured ? ' featured' : '');
+    const t = lang === 'en' ? w.titleEn : w.titleEs;
+    const loc = lang === 'en' ? w.locationEn : w.locationEs;
+    item.innerHTML = `<img src="${w.src}" alt="${t}" loading="lazy"><div class="installed-caption"><h4>${t}</h4><p>${loc}</p></div>`;
+    iGrid.appendChild(item);
+    observer.observe(item);
+  });
+}
+ 
+renderInstalled();
+ 
 // ─── TESTIMONIALS ───
 function renderTestimonials() {
   const tGrid = document.getElementById('testimonialsGrid');
@@ -786,10 +792,10 @@ function renderTestimonials() {
     card.className = 'testimonial-card reveal';
     card.innerHTML = `<p>${t.text}</p><div class="testimonial-author"><strong>${t.author}</strong><span>${t.location}</span></div>`;
     tGrid.appendChild(card);
+    observer.observe(card);
   });
-  document.querySelectorAll('.testimonial-card.reveal').forEach(el => observer.observe(el));
 }
-
+ 
 // ─── EXHIBITIONS ───
 function renderExhibitions() {
   const eList = document.getElementById('exhibitionsList');
@@ -799,19 +805,33 @@ function renderExhibitions() {
     item.className = 'exhibition-item reveal';
     item.innerHTML = `<div class="exhibition-year">${e.year}</div><div class="exhibition-details"><h4>${e.title}</h4><p>${e.desc}</p></div>`;
     eList.appendChild(item);
+    observer.observe(item);
   });
-  document.querySelectorAll('.exhibition-item.reveal').forEach(el => observer.observe(el));
 }
-
+ 
 // ─── LIGHTBOX ───
 const lightbox = document.getElementById('lightbox');
 const lImg = document.getElementById('lightboxImg');
 const lTitle = document.getElementById('lightboxTitle');
 const lMeta = document.getElementById('lightboxMeta');
 let lItems = [], lIdx = 0;
-function openLightbox(items, idx) { lItems = items; lIdx = idx; showLB(); lightbox.classList.add('active'); document.body.style.overflow = 'hidden'; }
-function showLB() { const a = lItems[lIdx]; lImg.src = a.src; lImg.alt = a.title; lTitle.textContent = a.title; lMeta.textContent = a.size + ' · Óleo sobre lienzo'; }
+ 
+function openLightbox(items, idx) {
+  lItems = items; lIdx = idx; showLB();
+  lightbox.classList.add('active'); document.body.style.overflow = 'hidden';
+}
+ 
+function showLB() {
+  const a = lItems[lIdx];
+  lImg.src = a.src;
+  lImg.alt = getTitle(a);
+  lTitle.textContent = getTitle(a);
+  const mediumLabel = lang === 'en' ? 'Oil on canvas' : 'Óleo sobre lienzo';
+  lMeta.textContent = a.size + ' · ' + mediumLabel;
+}
+ 
 function closeLB() { lightbox.classList.remove('active'); document.body.style.overflow = ''; }
+ 
 document.querySelector('.lightbox-close').addEventListener('click', closeLB);
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLB(); });
 document.querySelector('.lightbox-prev').addEventListener('click', e => { e.stopPropagation(); lIdx = (lIdx - 1 + lItems.length) % lItems.length; showLB(); });
@@ -822,21 +842,23 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') { lIdx = (lIdx - 1 + lItems.length) % lItems.length; showLB(); }
   if (e.key === 'ArrowRight') { lIdx = (lIdx + 1) % lItems.length; showLB(); }
 });
-
+ 
 // ─── SCROLL REVEALS ───
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+ 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
+ 
 // ─── SMOOTH SCROLL ───
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => { e.preventDefault(); const t = document.querySelector(a.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
 });
-
+ 
 // ─── INIT ───
 renderTestimonials();
 renderExhibitions();
 </script>
 </body>
 </html>
+ 
